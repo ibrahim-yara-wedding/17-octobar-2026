@@ -25,7 +25,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet" />
 
-  <title>Wedding Andrea &amp; Pedro</title>
+  <title>Wedding Ibrahim &amp; Yara</title>
   <meta name="google" content="notranslate" />
   <meta name="description" content="This invitation is exclusively for you | The Digital Yes" />
   <meta name="author" content="Lovable" />
@@ -41,8 +41,8 @@
   <meta name="twitter:image"
     content="https://storage.googleapis.com/gpt-engineer-file-uploads/0j9uH4vSivM1S099FoFux2rSNHi1/social-images/social-1773095903383-Logo_The_Digital_Yes_2.webp" />
 
-  <meta property="og:title" content="Wedding Andrea &amp; Pedro" />
-  <meta name="twitter:title" content="Wedding Andrea &amp; Pedro" />
+  <meta property="og:title" content="Wedding Ibrahim &amp; Yara" />
+  <meta name="twitter:title" content="Wedding Ibrahim &amp; Yara" />
   <meta property="og:description" content="This invitation is exclusively for you | The Digital Yes" />
   <meta name="twitter:description" content="This invitation is exclusively for you | The Digital Yes" />
 
@@ -880,9 +880,9 @@
             </p>
             <h1 class="mb-0" style="opacity: 1; transform: none">
               <span
-                class="font-display font-normal text-6xl md:text-8xl lg:text-9xl text-white block leading-[0.9] drop-shadow-lg">Andrea</span><span
+                class="font-display font-normal text-6xl md:text-8xl lg:text-9xl text-white block leading-[0.9] drop-shadow-lg">Ibrahim</span><span
                 class="font-display font-normal text-3xl md:text-4xl text-white my-4 block italic drop-shadow-lg">&amp;</span><span
-                class="font-display font-normal text-6xl md:text-8xl lg:text-9xl text-white block leading-[0.9] drop-shadow-lg">Pedro</span>
+                class="font-display font-normal text-6xl md:text-8xl lg:text-9xl text-white block leading-[0.9] drop-shadow-lg">Yara</span>
             </h1>
           </div>
           <div class="flex-1"></div>
@@ -893,7 +893,7 @@
             </div>
             <div style="opacity: 1; transform: none">
               <p class="text-2xl md:text-4xl font-body tracking-widest text-white drop-shadow-lg font-light">
-                12 September 2026
+                17 Octobar 2026
               </p>
             </div>
           </div>
@@ -912,36 +912,51 @@
         </button>
       </section>
       <section id="countdown" class="py-16 md:py-20 px-4 relative overflow-hidden" style="
-            background-image: url(&quot;white-textured-paper-KasY8RAJ.png&quot;);
-            background-size: cover;
-            background-position: center center;
-          ">
-        <div class="relative max-w-xl mx-auto text-center">
+      background-image: url('white-textured-paper-KasY8RAJ.png');
+      background-size: cover;
+      background-position: center center;
+    ">
+        <div class="relative max-w-2xl mx-auto text-center">
           <h2 class="font-display text-4xl md:text-7xl text-sage-dark mb-1" style="opacity: 1; transform: none">
             Countdown
           </h2>
           <p class="text-sage-dark/60 text-sm font-body tracking-[0.25em] uppercase mb-10" style="opacity: 1">
-            Until 12 September 2026
+            Until 17 October 2026
           </p>
-          <div class="flex items-center justify-center" style="opacity: 1; transform: none">
+
+          <div class="flex items-center justify-center flex-wrap" style="opacity: 1; transform: none">
+            <!-- Days -->
             <div class="flex items-center">
               <div class="flex flex-col items-center px-4 md:px-7">
-                <span class="font-display text-4xl md:text-6xl text-sage-dark leading-none">126</span><span
-                  class="mt-2 text-[10px] tracking-[0.25em] uppercase text-gold/80 font-body">Days</span>
+                <span id="days" class="font-display text-4xl md:text-6xl text-sage-dark leading-none">00</span>
+                <span class="mt-2 text-[10px] tracking-[0.25em] uppercase text-gold/80 font-body">Days</span>
               </div>
               <span class="w-px h-8 bg-sage-dark/20 mx-1 mb-4"></span>
             </div>
+
+            <!-- Hours -->
             <div class="flex items-center">
               <div class="flex flex-col items-center px-4 md:px-7">
-                <span class="font-display text-4xl md:text-6xl text-sage-dark leading-none">20</span><span
-                  class="mt-2 text-[10px] tracking-[0.25em] uppercase text-gold/80 font-body">Hours</span>
+                <span id="hours" class="font-display text-4xl md:text-6xl text-sage-dark leading-none">00</span>
+                <span class="mt-2 text-[10px] tracking-[0.25em] uppercase text-gold/80 font-body">Hours</span>
               </div>
               <span class="w-px h-8 bg-sage-dark/20 mx-1 mb-4"></span>
             </div>
+
+            <!-- Minutes -->
             <div class="flex items-center">
               <div class="flex flex-col items-center px-4 md:px-7">
-                <span class="font-display text-4xl md:text-6xl text-sage-dark leading-none">30</span><span
-                  class="mt-2 text-[10px] tracking-[0.25em] uppercase text-gold/80 font-body">Minutes</span>
+                <span id="minutes" class="font-display text-4xl md:text-6xl text-sage-dark leading-none">00</span>
+                <span class="mt-2 text-[10px] tracking-[0.25em] uppercase text-gold/80 font-body">Minutes</span>
+              </div>
+              <span class="w-px h-8 bg-sage-dark/20 mx-1 mb-4"></span>
+            </div>
+
+            <!-- Seconds -->
+            <div class="flex items-center">
+              <div class="flex flex-col items-center px-4 md:px-7">
+                <span id="seconds" class="font-display text-4xl md:text-6xl text-sage-dark leading-none">00</span>
+                <span class="mt-2 text-[10px] tracking-[0.25em] uppercase text-gold/80 font-body">Seconds</span>
               </div>
             </div>
           </div>
@@ -1024,32 +1039,29 @@
           </div>
           <div class="bg-white rounded-2xl border border-gold/20 p-8 shadow-lg text-center"
             style="opacity: 1; transform: none">
-            <img src="venue-hedsor-DSq2yQw3.png" alt="Finca El Olivar" class="w-full max-w-lg h-auto mx-auto mb-2"
-              loading="lazy" />
+            <img src="hotel_photo.jpeg" alt="Almasa Hotel" class="w-full max-w-lg h-auto mx-auto mb-2" loading="lazy" />
             <h3 class="font-display text-3xl md:text-4xl text-sage-dark mb-6 border-b border-gold/20 pb-4">
-              Finca El Olivar
+              Almasa Hotel
             </h3>
             <div class="space-y-5 mb-8">
               <div class="flex items-center justify-center gap-3 text-sage-dark">
-                <span class="font-body text-base tracking-wide italic opacity-70">12 September 2026</span><span
-                  class="text-gold/40">·</span><span class="font-display text-2xl">14:00</span>
+                <span class="font-body text-base tracking-wide italic opacity-70">17 Octobar 2026</span><span
+                  class="text-gold/40">·</span><span class="font-display text-2xl">8:00 PM</span>
               </div>
               <div class="w-12 h-px bg-gold/30 mx-auto"></div>
               <div class="flex flex-col items-center gap-1 text-sage-dark">
-                <span class="font-body text-base tracking-wide">Camino de los Olivos s/n, Ronda</span><span
-                  class="font-body text-sm tracking-wide opacity-70">Málaga, 29400 – España</span>
+                <span class="font-body text-base tracking-wide">Almasa Hotel, Dr Abd El-Aziz El-Shennawy Street
+                </span><span class="fvont-body text-sm tracking-wide opacity-70">Gameat AlAzhar - Cairo</span>
               </div>
             </div>
             <div class="w-full rounded-xl overflow-hidden mb-6" style="height: 240px">
-              <iframe src="index_1.html" width="100%" height="240" allowfullscreen loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade" title="Finca El Olivar, Ronda" style="
-                    border: 0px;
-                    filter: sepia(0.25) saturate(0.6) hue-rotate(5deg)
-                      brightness(1.05);
-                  "></iframe>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d110515.24138001153!2d31.2883702!3d30.0482944!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583e51103c0615%3A0xc2eb3aec54a78cbc!2sAl%20Masa%20Hotel%20Nasr%20City!5e0!3m2!1sen!2seg!4v1779378015373!5m2!1sen!2seg"
+                width="700" height="240" style="border:0; filter: sepia(0.25) saturate(0.6) hue-rotate(5deg)
+                      brightness(1.05);" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-            <a href="https://www.google.com/maps/search/?api=1&amp;query=Finca+El+Olivar+Ronda+Malaga+Spain"
-              target="_blank" rel="noopener noreferrer"
+            <a href="https://maps.app.goo.gl/JX4ToKPT3hERWnAw6" target="_blank" rel="noopener noreferrer"
               class="inline-flex items-center gap-2 font-body text-sm tracking-[0.15em] uppercase text-sage-dark/70 hover:text-gold transition-colors border-b border-gold/30 hover:border-gold pb-1"><svg
                 xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -1076,7 +1088,7 @@
               Day Programme
             </h2>
             <p class="text-gold font-body tracking-wide font-medium">
-              12 September 2026
+              17 Octobar 2026
             </p>
           </div>
           <div class="relative">
@@ -1088,7 +1100,7 @@
                 <div class="w-1/2 pl-8 text-left">
                   <div>
                     <p class="font-body font-bold text-sage-dark tracking-[0.15em] text-sm md:text-base">
-                      14:00
+                      8:00 PM
                     </p>
                     <p class="font-body text-sage-dark/80 tracking-[0.15em] uppercase text-xs md:text-sm mt-0.5">
                       Arrival
@@ -1174,8 +1186,8 @@
         <img src="champagne-tower-Or6MBjHQ.png" alt class="w-32 md:w-40 h-auto opacity-80" />
       </div>
       <section class="relative overflow-hidden">
-        <img src="venue-hedsor-front-COdUzTcT.png" alt aria-hidden="true"
-          class="absolute inset-0 w-full h-full object-cover object-center" />
+        <img src="hotel_photo.jpeg" alt aria-hidden="true"
+          class="absolute inset-0 w-full h-full object-cover object-bottom" />
         <div class="relative z-10 px-6 md:px-16 py-10 md:py-16">
           <div class="max-w-4xl mx-auto flex justify-center">
             <div
@@ -1283,8 +1295,7 @@
                   <circle cx="12" cy="10" r="3"></circle>
                 </svg>
                 <p class="text-sage-dark font-body text-base leading-relaxed font-medium">
-                  Finca El Olivar, Camino de los Olivos s/n, 29400 Ronda,
-                  Málaga – Spain
+                  Almasa Hotel, Dr Abd El-Aziz El-Shennawy, Gameat Al Azhar, Cairo.
                 </p>
               </div>
               <a href="https://www.google.com/maps/search/?api=1&amp;query=Finca+El+Olivar+Ronda+Malaga+Spain"
@@ -1325,7 +1336,7 @@
               Accommodation
             </h2>
             <p class="text-sage-dark/70 font-body tracking-wide mt-4">
-              Finca El Olivar does not offer lodging. Here are some
+              Almasa Hotel does not offer lodging. Here are some
               recommended options nearby.
             </p>
           </div>
@@ -1402,7 +1413,7 @@
           </div>
           <p class="text-center text-sage-dark/60 mt-8 font-body text-sm italic" style="opacity: 1; transform: none">
             For hotels without direct agreements, please mention "Wedding at
-            Finca El Olivar" to access preferential rates.
+            Almasa Hotel" to access preferential rates.
           </p>
         </div>
       </section>
@@ -1454,8 +1465,8 @@
         </div>
       </div>
       <section class="relative overflow-hidden">
-        <img src="venue-hedsor-front-COdUzTcT.png" alt aria-hidden="true"
-          class="absolute inset-0 w-full h-full object-cover object-center" />
+        <img src="hotel_photo.jpeg" alt aria-hidden="true"
+          class="absolute inset-0 w-full h-full object-cover object-bottom" />
         <div class="relative z-10 px-6 md:px-16 py-10 md:py-16">
           <div class="max-w-3xl mx-auto text-center">
             <div class="bg-white rounded-lg border border-sage/20 p-10 md:p-14 shadow-md max-w-2xl mx-auto"
@@ -1469,7 +1480,7 @@
               </p>
               <div class="bg-ivory rounded-lg p-6 mb-4 text-left">
                 <h3 class="font-body text-sm uppercase tracking-[0.15em] text-sage-dark font-medium mb-3">
-                  CaixaBank – Andrea Morales
+                  CaixaBank – Ibrahim Elsawy
                 </h3>
                 <p class="text-sage-dark/70 font-body text-sm whitespace-pre-line leading-relaxed">
                   IBAN: ES00 0000 0000 0000 0000 0000 BIC/SWIFT: XXXXXXXXXX
@@ -1477,7 +1488,7 @@
               </div>
               <div class="bg-ivory rounded-lg p-6 text-left">
                 <h3 class="font-body text-sm uppercase tracking-[0.15em] text-sage-dark font-medium mb-3">
-                  Banco Santander – Pedro Fernández
+                  Banco Santander – Yara Yehia
                 </h3>
                 <p class="text-sage-dark/70 font-body text-sm whitespace-pre-line leading-relaxed">
                   IBAN: ES00 0000 0000 0000 0000 0000 BIC/SWIFT: XXXXXXXXXX
@@ -1673,21 +1684,16 @@
           ">
         <div class="relative z-10" style="opacity: 1">
           <p class="font-display text-5xl md:text-6xl text-sage-dark mb-1 leading-tight">
-            Andrea
+            Ibrahim
           </p>
           <p class="font-display text-3xl md:text-4xl text-sage-dark italic mb-1">
             &amp;
           </p>
           <p class="font-display text-5xl md:text-6xl text-sage-dark mb-2 leading-tight">
-            Pedro
+            Yara
           </p>
           <p class="text-lg text-gold font-body font-semibold tracking-wide">
-            12 September 2026
-          </p>
-          <p class="text-sm text-sage-dark/60 mt-12 font-body font-medium">
-            Made with love by
-            <a href="https://www.thedigitalyes.com/" target="_blank" rel="noopener noreferrer"
-              class="hover:text-gold transition-colors underline underline-offset-2 font-semibold">The Digital Yes</a>
+            17 Octobar 2026
           </p>
         </div>
       </footer>
@@ -1941,6 +1947,43 @@
       },
       { once: true },
     );
+  </script>
+  <script>
+    // Set the target wedding date (October 17, 2026 at 8:00 PM)
+    const targetDate = new Date("Oct 17, 2026 20:00:00").getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const difference = targetDate - now;
+
+      // If the date has passed, stop the timer
+      if (difference < 0) {
+        document.getElementById("countdown").innerHTML = `
+        <div class="relative max-w-xl mx-auto text-center">
+          <h2 class="font-display text-4xl md:text-7xl text-sage-dark mb-1">The Big Day Has Arrived!</h2>
+        </div>`;
+        clearInterval(timerInterval);
+        return;
+      }
+
+      // Time calculations for days, hours, minutes, and seconds
+      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+      // Inject the calculated values into our HTML elements
+      document.getElementById("days").innerText = days;
+      document.getElementById("hours").innerText = hours.toString().padStart(2, '0');
+      document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
+      document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
+    }
+
+    // Run immediately on page load so it doesn't flash "00"
+    updateCountdown();
+
+    // Keep it refreshing every 1 second (1000 milliseconds)
+    const timerInterval = setInterval(updateCountdown, 1000);
   </script>
 </body>
 

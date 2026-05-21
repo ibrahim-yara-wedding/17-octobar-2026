@@ -1051,7 +1051,7 @@ h6 {
   max-width: var(--skeleton-width);
 }
 .max-w-lg {
-  max-width: 32rem;
+  max-width: 38rem;
 }
 .max-w-max {
   max-width: -moz-max-content;
@@ -1597,9 +1597,9 @@ h6 {
   -o-object-fit: cover;
   object-fit: cover;
 }
-.object-center {
-  -o-object-position: center;
-  object-position: center;
+.object-bottom {
+  -o-object-position: bottom;
+  object-position: bottom;
 }
 .p-0 {
   padding: 0;
