@@ -1,0 +1,16 @@
+{
+  "name": "Wedding Ibrahim & Yara",
+  "short_name": "Wedding",
+  "description": "Wedding invitation for Ibrahim & Yara - 17 October 2026",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f9f7f2",
+  "theme_color": "#c5a46d",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 16x16",
+      "type": "image/x-icon"
+    }
+  ]
+}
