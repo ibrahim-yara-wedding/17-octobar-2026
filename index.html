@@ -44,26 +44,33 @@
       opacity: 1;
       transform: translateY(0) scale(1);
     }
-    /* RTL / Arabic overrides */
-    html[dir="rtl"] .font-display:not(.font-en) { font-family: 'Amiri', serif; letter-spacing: 0; }
-    html[dir="rtl"] .font-en { font-family: 'Pinyon Script', cursive !important; letter-spacing: initial !important; }
-    html[dir="rtl"] .font-body   { font-family: 'Cairo', sans-serif; letter-spacing: 0; }
-    html[dir="rtl"] [class*="tracking-"] { letter-spacing: 0 !important; }
-    html[dir="rtl"] .text-left  { text-align: right !important; }
-    html[dir="rtl"] .text-right { text-align: left  !important; }
-    /* Boost small Arabic text sizes and remove uppercase (not applicable in Arabic) */
-    html[dir="rtl"] .text-xs { font-size: 0.875rem !important; }
-    html[dir="rtl"] .text-sm { font-size: 1rem !important; }
-    html[dir="rtl"] .uppercase { text-transform: none !important; }
-    /* Programme timeline: restore LTR physical order (first item on right = natural RTL) */
-    html[dir="rtl"] .programme-section .flex.items-center { flex-direction: row-reverse; }
-    html[dir="rtl"] .programme-section .text-right { text-align: right !important; }
-    html[dir="rtl"] .programme-section .text-left  { text-align: right !important; }
+    /* RTL / Arabic overrides — dir is set on <body> (not <html>) to keep the
+       native page scrollbar on the right and avoid double-scrollbar artifacts */
+    body[dir="rtl"] .font-display:not(.font-en) { font-family: 'Amiri', serif; letter-spacing: 0; }
+    body[dir="rtl"] .font-en { font-family: 'Pinyon Script', cursive !important; letter-spacing: initial !important; }
+    body[dir="rtl"] .font-body   { font-family: 'Cairo', sans-serif; letter-spacing: 0; }
+    body[dir="rtl"] [class*="tracking-"] { letter-spacing: 0 !important; }
+    body[dir="rtl"] .text-left  { text-align: right !important; }
+    body[dir="rtl"] .text-right { text-align: left  !important; }
+    /* Boost small Arabic text sizes and remove uppercase */
+    body[dir="rtl"] .text-xs { font-size: 0.875rem !important; }
+    body[dir="rtl"] .text-sm { font-size: 1rem !important; }
+    body[dir="rtl"] .text-me { font-size: 1.3rem !important; }
+    body[dir="rtl"] .uppercase { text-transform: none !important; }
+    /* Programme timeline: flip physical order so content alternates correctly in RTL */
+    body[dir="rtl"] .programme-section .flex.items-center { flex-direction: row-reverse; }
+    /* After row-reverse the LEFT-side div (originally pl-8/text-left) is swapped to the physical left.
+       Swap padding so content always pads away from the outer edge (toward the centre line). */
+    body[dir="rtl"] .programme-section .w-1\/2.pr-8 { padding-right: 2rem !important; padding-left: 0 !important; }
+    body[dir="rtl"] .programme-section .w-1\/2.pl-8 { padding-left: 2rem !important; padding-right: 0 !important; }
+    /* After row-reverse: divs ending on the RIGHT side keep text-right class → align left toward centre */
+    body[dir="rtl"] .programme-section .text-right { text-align: right !important; }
+    /* After row-reverse: divs ending on the LEFT side keep text-left class → align right toward centre */
+    body[dir="rtl"] .programme-section .text-left  { text-align: left !important; }
     /* Keep marquee scrolling left-to-right regardless of page direction */
-    html[dir="rtl"] .animate-marquee { direction: ltr; }
+    body[dir="rtl"] .animate-marquee { direction: ltr; }
     /* Prevent animated transforms from leaking horizontal scroll in RTL mode */
-    html[dir="rtl"] body { overflow-x: hidden; }
-    html[dir="rtl"] { overflow-x: hidden; }
+    body[dir="rtl"] { overflow-x: hidden; }
   </style>
 </head>
 
@@ -141,7 +148,7 @@
         </div>
         <div class="relative z-10 flex-1 flex flex-col">
           <div class="flex flex-col items-center text-center px-6 pt-20 md:pt-28">
-            <p class="text-sm md:text-base tracking-[0.4em] uppercase text-white mb-4 font-body font-semibold drop-shadow-lg"
+            <p class="text-me md:text-base tracking-[0.4em] uppercase text-white mb-4 font-body font-semibold drop-shadow-lg"
               style="opacity: 1; transform: none" data-i18n="hero.subtitle">
               We're getting married
             </p>
@@ -1392,7 +1399,9 @@
 
         // Direction + lang on <html>
         document.documentElement.lang = lang;
-        document.documentElement.dir  = isAR ? 'rtl' : 'ltr';
+        // Set dir on <body> (not <html>) so the browser's native scrollbar
+        // stays on the right side and no double-scrollbar appears in RTL mode.
+        document.body.dir = isAR ? 'rtl' : 'ltr';
 
         // Update URL hash without triggering a scroll
         history.replaceState(null, '', window.location.pathname + window.location.search + '#' + lang);
