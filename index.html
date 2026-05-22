@@ -784,6 +784,21 @@
       }
     })(["veepn-lock-screen"]);
   </script>
+
+  <style>
+    .reveal {
+      opacity: 0;
+      transform: translateY(52px) scale(0.985);
+      transition:
+        opacity 0.95s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 0.95s cubic-bezier(0.22, 1, 0.36, 1);
+      will-change: opacity, transform;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  </style>
 </head>
 
 <body>
@@ -861,7 +876,7 @@
           class="px-3 py-1.5 rounded-full text-sm font-body font-medium transition-colors bg-sage-dark text-white">
           EN</button><button
           class="px-3 py-1.5 rounded-full text-sm font-body font-medium transition-colors text-sage-dark hover:bg-sage/10">
-          ES
+          AR
         </button>
       </div>
       <section class="relative min-h-screen flex flex-col overflow-hidden bg-white">
@@ -1699,9 +1714,10 @@
       </footer>
     </main>
     <button
+      id="muteBtn"
       class="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-full bg-white/90 backdrop-blur-sm border border-gold/30 shadow-lg flex items-center justify-center text-sage-dark hover:bg-white hover:scale-110 transition-all duration-300"
-      aria-label="Silenciar" style="opacity: 1; transform: none">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      aria-label="Mute" style="opacity: 1; transform: none">
+      <svg id="muteBtnIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
         class="lucide lucide-volume2 w-5 h-5">
         <path
@@ -1947,6 +1963,28 @@
       },
       { once: true },
     );
+
+    (function () {
+      const btn = document.getElementById("muteBtn");
+      const icon = document.getElementById("muteBtnIcon");
+      const audio = document.getElementById("bgMusic");
+
+      const ICON_ON = `<path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"></path><path d="M16 9a5 5 0 0 1 0 6"></path><path d="M19.364 18.364a9 9 0 0 0 0-12.728"></path>`;
+      const ICON_OFF = `<path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"></path><line x1="22" x2="16" y1="9" y2="15"></line><line x1="16" x2="22" y1="9" y2="15"></line>`;
+
+      btn.addEventListener("click", function () {
+        audio.muted = !audio.muted;
+        if (audio.muted) {
+          icon.innerHTML = ICON_OFF;
+          icon.setAttribute("class", "lucide lucide-volume-x w-5 h-5");
+          btn.setAttribute("aria-label", "Unmute");
+        } else {
+          icon.innerHTML = ICON_ON;
+          icon.setAttribute("class", "lucide lucide-volume2 w-5 h-5");
+          btn.setAttribute("aria-label", "Mute");
+        }
+      });
+    })();
   </script>
   <script>
     // Set the target wedding date (October 17, 2026 at 8:00 PM)
@@ -1984,6 +2022,34 @@
 
     // Keep it refreshing every 1 second (1000 milliseconds)
     const timerInterval = setInterval(updateCountdown, 1000);
+  </script>
+
+  <script>
+    (function () {
+      var targets = document.querySelectorAll(
+        'main > section:not(:first-of-type), main > div.bg-ivory, main > footer'
+      );
+
+      targets.forEach(function (el) {
+        el.classList.add('reveal');
+      });
+
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.06,
+        rootMargin: '0px 0px -30px 0px'
+      });
+
+      targets.forEach(function (el) {
+        observer.observe(el);
+      });
+    })();
   </script>
 </body>
 
