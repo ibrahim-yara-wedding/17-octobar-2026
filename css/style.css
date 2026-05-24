@@ -962,6 +962,9 @@ h6 {
 .w-24 {
   width: 6rem;
 }
+.w-28 {
+  width: 7rem;
+}
 .w-3 {
   width: 0.75rem;
 }
@@ -1597,9 +1600,9 @@ h6 {
   -o-object-fit: cover;
   object-fit: cover;
 }
-.object-bottom {
-  -o-object-position: bottom;
-  object-position: bottom;
+.object-right {
+  -o-object-position: right;
+  object-position: right;
 }
 .p-0 {
   padding: 0;
@@ -2415,7 +2418,7 @@ h6 {
     transform: translate(0);
   }
   to {
-    transform: translate(-50%);
+    transform: translate(-33.33%);
   }
 }
 .animate-marquee {
@@ -3819,4 +3822,194 @@ h6 {
 }
 [data-side="right"] .\[\[data-side\=right\]_\&\]\:cursor-e-resize {
   cursor: e-resize;
+}
+
+/* ==========================================================================
+   Custom Styles (moved from inline <style>)
+   ========================================================================== */
+
+.beige-filter {
+  filter:
+    brightness(1.02)
+    contrast(0.96)
+    saturate(0.88)
+    sepia(0.08)
+    hue-rotate(6deg);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(52px) scale(0.985);
+  transition:
+    opacity 0.95s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.95s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* ==========================================================================
+   RTL Overrides
+   ========================================================================== */
+
+body[dir="rtl"] .font-display:not(.font-en) {
+  font-family: 'Amiri', serif;
+  letter-spacing: 0;
+}
+
+body[dir="rtl"] .font-en {
+  font-family: 'Pinyon Script', cursive !important;
+  letter-spacing: initial !important;
+}
+
+body[dir="rtl"] .font-body {
+  font-family: var(--font-body), 'Cairo', sans-serif;
+  letter-spacing: 0;
+}
+
+body[dir="rtl"] [class*="tracking-"] {
+  letter-spacing: 0 !important;
+}
+
+body[dir="rtl"] #btn-en,
+body[dir="rtl"] #btn-ar {
+  font-family: var(--font-body), sans-serif !important;
+  font-size: 0.875rem !important;
+}
+
+body[dir="rtl"] .fixed.top-4.right-4 {
+  right: 1rem !important;
+  left: auto !important;
+  direction: ltr !important;
+}
+
+body[dir="rtl"] .text-left {
+  text-align: right !important;
+}
+
+body[dir="rtl"] .text-right {
+  text-align: left !important;
+}
+
+body[dir="rtl"] .text-xs {
+  font-size: 1rem !important;
+}
+
+body[dir="rtl"] .text-sm {
+  font-size: 1.125rem !important;
+}
+
+body[dir="rtl"] .text-me {
+  font-size: 1.25rem !important;
+}
+
+body[dir="rtl"] .text-base {
+  font-size: 1.125rem !important;
+}
+
+body[dir="rtl"] .text-lg {
+  font-size: 1.3rem !important;
+}
+
+body[dir="rtl"] [data-i18n="hero.rsvp"] {
+  font-size: 1.2rem !important;
+}
+
+body[dir="rtl"] .tracking-wide.font-medium {
+  font-size: 1.25rem !important;
+  margin-top: 0.75rem !important;
+}
+
+body[dir="rtl"] .uppercase {
+  text-transform: none !important;
+}
+
+body[dir="rtl"] .programme-section .flex.items-center {
+  flex-direction: row-reverse;
+}
+
+body[dir="rtl"] .programme-section .w-1\/2.pr-8 {
+  padding-right: 2rem !important;
+  padding-left: 0 !important;
+}
+
+body[dir="rtl"] .programme-section .w-1\/2.pl-8 {
+  padding-left: 2rem !important;
+  padding-right: 0 !important;
+}
+
+body[dir="rtl"] .programme-section .text-right {
+  text-align: right !important;
+}
+
+body[dir="rtl"] .programme-section .text-left {
+  text-align: left !important;
+}
+
+body[dir="rtl"] .overflow-hidden:has(.animate-marquee) {
+  direction: ltr;
+}
+
+body[dir="rtl"] .animate-marquee {
+  direction: ltr;
+}
+
+body[dir="rtl"] [data-i18n="wedding.date"],
+body[dir="rtl"] [data-i18n="countdown.until"],
+body[dir="rtl"] .programme-section .font-bold,
+body[dir="rtl"] [dir="ltr"] {
+  direction: ltr;
+  unicode-bidi: isolate;
+  font-family: var(--font-body), sans-serif !important;
+  letter-spacing: inherit !important;
+  text-transform: inherit !important;
+}
+
+body[dir="rtl"] [data-i18n="wedding.date"] {
+  letter-spacing: 0.1em !important;
+}
+
+body[dir="rtl"] [data-i18n="countdown.until"] {
+  letter-spacing: 0.25em !important;
+  text-transform: uppercase !important;
+  font-size: 1rem !important;
+  margin-top: 0.75rem !important;
+}
+
+body[dir="rtl"] .programme-section .font-bold {
+  letter-spacing: 0.15em !important;
+}
+
+body[dir="rtl"] #days,
+body[dir="rtl"] #hours,
+body[dir="rtl"] #minutes,
+body[dir="rtl"] #seconds {
+  font-family: var(--font-display), cursive !important;
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+body[dir="rtl"] {
+  overflow-x: hidden;
+}
+
+body[dir="rtl"] .reveal {
+  transform: translateY(52px) !important;
+  will-change: auto;
+}
+
+body[dir="rtl"] .reveal.visible {
+  transform: translateY(0) !important;
+}
+
+body[dir="rtl"] [role="radiogroup"] {
+  direction: rtl;
+}
+
+body[dir="rtl"] [role="radiogroup"] .space-x-2 > :not([hidden]) ~ :not([hidden]) {
+  margin-left: 0 !important;
+  margin-right: 0.5rem !important;
 }

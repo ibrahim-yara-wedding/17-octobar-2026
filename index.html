@@ -42,113 +42,6 @@
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="css/style.css" />
-
-  <style>
-    .reveal {
-      opacity: 0;
-      transform: translateY(52px) scale(0.985);
-      transition:
-        opacity 0.95s cubic-bezier(0.22, 1, 0.36, 1),
-        transform 0.95s cubic-bezier(0.22, 1, 0.36, 1);
-      will-change: opacity, transform;
-    }
-
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0) scale(1);
-    }
-
-    body[dir="rtl"] .font-display:not(.font-en) {
-      font-family: 'Amiri', serif;
-      letter-spacing: 0;
-    }
-
-    body[dir="rtl"] .font-en {
-      font-family: 'Pinyon Script', cursive !important;
-      letter-spacing: initial !important;
-    }
-
-    body[dir="rtl"] .font-body {
-      font-family: var(--font-body), 'Cairo', sans-serif;
-      letter-spacing: 0;
-    }
-
-    body[dir="rtl"] [class*="tracking-"] {
-      letter-spacing: 0 !important;
-    }
-
-    body[dir="rtl"] .text-left {
-      text-align: right !important;
-    }
-
-    body[dir="rtl"] .text-right {
-      text-align: left !important;
-    }
-
-    body[dir="rtl"] .text-xs {
-      font-size: 0.875rem !important;
-    }
-
-    body[dir="rtl"] .text-sm {
-      font-size: 1rem !important;
-    }
-
-    body[dir="rtl"] .text-me {
-      font-size: 1.3rem !important;
-    }
-
-    body[dir="rtl"] .uppercase {
-      text-transform: none !important;
-    }
-
-    body[dir="rtl"] .programme-section .flex.items-center {
-      flex-direction: row-reverse;
-    }
-
-    body[dir="rtl"] .programme-section .w-1\/2.pr-8 {
-      padding-right: 2rem !important;
-      padding-left: 0 !important;
-    }
-
-    body[dir="rtl"] .programme-section .w-1\/2.pl-8 {
-      padding-left: 2rem !important;
-      padding-right: 0 !important;
-    }
-
-    body[dir="rtl"] .programme-section .text-right {
-      text-align: right !important;
-    }
-
-    body[dir="rtl"] .programme-section .text-left {
-      text-align: left !important;
-    }
-
-    body[dir="rtl"] .animate-marquee {
-      direction: ltr;
-    }
-
-    body[dir="rtl"] {
-      overflow-x: hidden;
-    }
-
-    body[dir="rtl"] .reveal {
-      transform: translateY(52px) !important;
-      will-change: auto;
-    }
-
-    body[dir="rtl"] .reveal.visible {
-      transform: translateY(0) !important;
-    }
-
-    body[dir="rtl"] [role="radiogroup"] {
-      direction: rtl;
-    }
-
-    body[dir="rtl"] [role="radiogroup"] .space-x-2> :not([hidden])~ :not([hidden]) {
-      margin-left: 0 !important;
-      margin-right: 0.5rem !important;
-    }
-  </style>
 </head>
 
 <body>
@@ -233,7 +126,7 @@
         </div>
         <button
           class="relative z-10 flex flex-col items-center gap-2 text-center text-white hover:text-gold transition-colors cursor-pointer pb-8"
-          onclick="document.getElementById('rsvp').scrollIntoView({behavior:'smooth'})">
+          onclick="document.getElementById('countdown').scrollIntoView({behavior:'smooth'})">
           <span class="text-xs tracking-[0.3em] uppercase font-body drop-shadow-lg" data-i18n="hero.rsvp">Ready to
             Celebrate?</span>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -293,11 +186,31 @@
           <h2 class="font-display text-4xl md:text-7xl text-sage-dark mb-6" data-i18n="welcome.title">Welcome!</h2>
           <div class="text-sage-dark/90 font-body text-lg leading-relaxed italic">
             <p data-i18n="welcome.body">We warmly invite you to celebrate our wedding day with us. We look forward to
-              sharing this unforgettable moment with our most special people.</p>
+              sharing this unforgettable moment with our most special people</p>
           </div>
         </div>
         <div class="w-full overflow-hidden">
           <div class="flex animate-marquee gap-3 md:gap-4" style="width:max-content;animation-play-state:running">
+            <div class="flex-shrink-0 overflow-hidden" style="height:340px;width:240px">
+              <img src="images/gallery/gallery-1.webp" alt="Wedding photo" class="h-full w-full object-cover"
+                loading="lazy" draggable="false" style="object-position:center 20%" />
+            </div>
+            <div class="flex-shrink-0 overflow-hidden" style="height:340px;width:240px">
+              <img src="images/gallery/gallery-2.webp" alt="Wedding photo" class="h-full w-full object-cover"
+                loading="lazy" draggable="false" style="object-position:center 55%" />
+            </div>
+            <div class="flex-shrink-0 overflow-hidden" style="height:340px;width:240px">
+              <img src="images/gallery/gallery-3.webp" alt="Wedding photo" class="h-full w-full object-cover"
+                loading="lazy" draggable="false" style="object-position:center 30%" />
+            </div>
+            <div class="flex-shrink-0 overflow-hidden" style="height:340px;width:240px">
+              <img src="images/gallery/gallery-4.webp" alt="Wedding photo" class="h-full w-full object-cover"
+                loading="lazy" draggable="false" style="object-position:center 40%" />
+            </div>
+            <div class="flex-shrink-0 overflow-hidden" style="height:340px;width:240px">
+              <img src="images/gallery/gallery-5.webp" alt="Wedding photo" class="h-full w-full object-cover"
+                loading="lazy" draggable="false" style="object-position:center 35%" />
+            </div>
             <div class="flex-shrink-0 overflow-hidden" style="height:340px;width:240px">
               <img src="images/gallery/gallery-1.webp" alt="Wedding photo" class="h-full w-full object-cover"
                 loading="lazy" draggable="false" style="object-position:center 20%" />
@@ -361,17 +274,15 @@
             <img src="images/hotel-photo.webp" alt="Almasa Hotel" class="w-full h-56 md:h-72 object-cover" loading="lazy" decoding="async" />
             <!-- Details below -->
             <div class="p-8 md:p-10 text-center">
-              <h3 class="font-display text-4xl md:text-5xl text-sage-dark mb-6 border-b border-gold/20 pb-4">Almasa Hotel</h3>
+              <h3 class="font-display text-4xl md:text-5xl text-sage-dark mb-2" data-i18n="venue.name">Almasa Hotel</h3>
+              <p class="font-body text-lg md:text-xl text-sage-dark/70 tracking-wide mb-6 border-b border-gold/20 pb-4" data-i18n="venue.hall">The Lounge Garden</p>
               <div class="space-y-5 mb-3">
                 <div class="flex items-center justify-center gap-3 text-sage-dark">
-                  <span class="font-body text-base tracking-wide italic opacity-70">17 October 2026 - 8:00 PM</span>
-                  <!-- <span class="text-gold/40">&middot;</span>
-                  <span class="font-display text-2xl">8:00 PM</span> -->
+                  <span class="font-body text-base tracking-wide italic opacity-70" dir="ltr">17 October 2026 - 8:00 PM</span>
                 </div>
                 <div class="w-12 h-px bg-gold/30 mx-auto"></div>
                 <div class="flex flex-col items-center gap-1 text-sage-dark">
-                  <!-- <span class="font-body text-base tracking-wide" data-i18n="venue.street"></span> -->
-                  <span class="font-body text-sm tracking-wide opacity-70" data-i18n="venue.city">Almasa Hotel, Dr Abd El-Aziz El-Shennawy Street, Gameat AlAzhar - Cairo</span>
+                  <span class="font-body text-sm tracking-wide opacity-70" data-i18n="venue.location">Almasa Hotel, Dr Abd El-Aziz El-Shennawy Street, Gameat AlAzhar - Cairo</span>
                 </div>
               </div>
               <div class="w-full rounded-xl overflow-hidden mb-6" style="height:220px">
@@ -407,8 +318,8 @@
           </div>
           <div class="bg-white/90 backdrop-blur-sm rounded-2xl border border-sage/30 shadow-lg overflow-hidden">
             <!-- Golf Cart Image -->
-            <img src="images/golf-cart-6.jpg" alt="Golf Cart"
-              class="w-full h-52 md:h-64 object-cover" loading="lazy" decoding="async" />
+            <img src="images/golf-cart.jpg" alt="Golf Cart"
+              class="w-full h-52 md:h-64 object-cover beige-filter" loading="lazy" decoding="async"/>
             <!-- Cards below image -->
             <div class="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-sage/20">
               <!-- Transportation Card -->
@@ -427,7 +338,7 @@
                   data-i18n="dresscode.women.desc">You must ride golf cart to reach the lounge garden,
                   please contact this number if you couldn't find one</p>
                 <a href="tel:+201273006656"
-                  class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-gold/15 text-gold font-body font-semibold text-sm not-italic hover:bg-gold/25 transition-colors">
+                  class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-gold/15 text-gold font-body font-semibold text-base not-italic hover:bg-gold/25 transition-colors">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
@@ -455,37 +366,26 @@
       </section>
 
   <!-- Cupid Divider -->
-  <div class="bg-ivory flex flex-col items-center py-14 md:py-20">
-    <img src="images/illustrations/cupid.webp" alt="" class="w-24 md:w-32 h-auto opacity-80" loading="lazy"
+  <div class="bg-ivory flex flex-col items-center py-16 md:py-16">
+    <img src="images/illustrations/cupid.webp" alt="" class="w-28 md:w-32 h-auto opacity-80" loading="lazy"
       decoding="async" />
   </div>
 
-  <!-- Gifts Section -->
-  <section class="section-padding" style="background-color:rgb(197,164,109)">
+    <!-- Adults Only Section -->
+  <section class="relative overflow-hidden">
+    <img src="images/hotel-photo.webp" alt aria-hidden="true"
+      class="absolute inset-0 w-full h-full object-cover object-right" />
     <div class="relative z-10 px-6 md:px-16 py-10 md:py-16">
       <div class="max-w-3xl mx-auto text-center">
-        <div class="bg-white rounded-lg border border-sage/20 p-10 md:p-14 shadow-md max-w-2xl mx-auto">
-          <h2 class="font-display text-4xl md:text-6xl text-sage-dark mb-6" data-i18n="gifts.title">Sweet
-            dreams, little ones</h2>
-          <!-- <p class="text-sage-dark/80 font-body text-lg leading-relaxed italic mb-8" data-i18n="gifts.desc"></p> -->
-          <img src="images/baby.png" alt="Golf Cart" class="w-full max-w-lg h-auto mx-auto mb-2" loading="lazy"
-            decoding="async" />
-          <!-- <div class="bg-ivory rounded-lg p-6 mb-4 text-left">
-            <h3 class="font-body text-sm uppercase tracking-[0.15em] text-sage-dark font-medium mb-3">CaixaBank
-              &ndash; Ibrahim Elsawy</h3>
-            <p class="text-sage-dark/70 font-body text-sm whitespace-pre-line leading-relaxed">IBAN: ES00 0000 0000
-              0000 0000 0000
-              BIC/SWIFT: XXXXXXXXXX</p>
+        <div class="bg-white rounded-2xl border border-sage/20 p-10 md:p-14 shadow-md max-w-2xl mx-auto">
+          <div class="flex flex-col items-center mb-4">
+            <img src="images/illustrations/sleeping-baby.png" alt="Sleeping Baby" class="w-32 md:w-40 h-auto opacity-80" loading="lazy" decoding="async" />
           </div>
-          <div class="bg-ivory rounded-lg p-6 text-left">
-            <h3 class="font-body text-sm uppercase tracking-[0.15em] text-sage-dark font-medium mb-3">Banco
-              Santander &ndash; Yara Yehia</h3>
-            <p class="text-sage-dark/70 font-body text-sm whitespace-pre-line leading-relaxed">IBAN: ES00 0000 0000
-              0000 0000 0000
-              BIC/SWIFT: XXXXXXXXXX</p> -->
+          <h2 class="font-display text-4xl md:text-5xl text-sage-dark mb-4" data-i18n="gifts.title">Sweet Dreams, Little Ones</h2>
+          <div class="w-12 h-px bg-gold/30 mx-auto mb-6"></div>
+          <p class="text-sage-dark/80 font-body text-lg leading-relaxed italic max-w-md mx-auto" data-i18n="gifts.desc">This is a grown-ups party — enjoy the night off!</p>
         </div>
       </div>
-    </div>
     </div>
   </section>
 
@@ -512,7 +412,7 @@
             <div class="w-1/2 pr-8 text-right"></div>
             <div class="w-1/2 pl-8 text-left">
               <p class="font-body font-bold text-sage-dark tracking-[0.15em] text-sm md:text-base">8:00 PM</p>
-              <p class="font-body text-sage-dark/80 tracking-[0.15em] uppercase text-xs md:text-sm mt-0.5"
+              <p class="font-body text-sage-dark/80 tracking-[0.15em] uppercase text-sm md:text-lg mt-0.5"
                 data-i18n="programme.arrival">Arrival</p>
             </div>
           </div>
@@ -520,7 +420,7 @@
             <div class="absolute left-1/2 -translate-x-1/2 w-4 h-px bg-sage-dark/40"></div>
             <div class="w-1/2 pr-8 text-right">
               <p class="font-body font-bold text-sage-dark tracking-[0.15em] text-sm md:text-base">8:30 PM</p>
-              <p class="font-body text-sage-dark/80 tracking-[0.15em] uppercase text-xs md:text-sm mt-0.5"
+              <p class="font-body text-sage-dark/80 tracking-[0.15em] uppercase text-sm md:text-lg mt-0.5"
                 data-i18n="programme.katb">Katb Ketab Ceremony</p>
             </div>
             <div class="w-1/2 pl-8 text-left"></div>
@@ -530,7 +430,7 @@
             <div class="w-1/2 pr-8 text-right"></div>
             <div class="w-1/2 pl-8 text-left">
               <p class="font-body font-bold text-sage-dark tracking-[0.15em] text-sm md:text-base">9:45 PM</p>
-              <p class="font-body text-sage-dark/80 tracking-[0.15em] uppercase text-xs md:text-sm mt-0.5"
+              <p class="font-body text-sage-dark/80 tracking-[0.15em] uppercase text-sm md:text-lg mt-0.5"
                 data-i18n="programme.cake">Cutting the Cake</p>
             </div>
           </div>
@@ -538,7 +438,7 @@
             <div class="absolute left-1/2 -translate-x-1/2 w-4 h-px bg-sage-dark/40"></div>
             <div class="w-1/2 pr-8 text-right">
               <p class="font-body font-bold text-sage-dark tracking-[0.15em] text-sm md:text-base">10:00 PM</p>
-              <p class="font-body text-sage-dark/80 tracking-[0.15em] uppercase text-xs md:text-sm mt-0.5"
+              <p class="font-body text-sage-dark/80 tracking-[0.15em] uppercase text-sm md:text-lg mt-0.5"
                 data-i18n="programme.dinner">Dinner</p>
             </div>
             <div class="w-1/2 pl-8 text-left"></div>
@@ -548,7 +448,7 @@
             <div class="w-1/2 pr-8 text-right"></div>
             <div class="w-1/2 pl-8 text-left">
               <p class="font-body font-bold text-sage-dark tracking-[0.15em] text-sm md:text-base">11:30 PM</p>
-              <p class="font-body text-sage-dark/80 tracking-[0.15em] uppercase text-xs md:text-sm mt-0.5"
+              <p class="font-body text-sage-dark/80 tracking-[0.15em] uppercase text-sm md:text-lg mt-0.5"
                 data-i18n="programme.photos">Photos</p>
             </div>
           </div>
@@ -556,7 +456,7 @@
             <div class="absolute left-1/2 -translate-x-1/2 w-4 h-px bg-sage-dark/40"></div>
             <div class="w-1/2 pr-8 text-right">
               <p class="font-body font-bold text-sage-dark tracking-[0.15em] text-sm md:text-base">12:00 AM</p>
-              <p class="font-body text-sage-dark/80 tracking-[0.15em] uppercase text-xs md:text-sm mt-0.5"
+              <p class="font-body text-sage-dark/80 tracking-[0.15em] uppercase text-sm md:text-lg mt-0.5"
                 data-i18n="programme.finish">Finish</p>
             </div>
             <div class="w-1/2 pl-8 text-left"></div>
@@ -575,6 +475,26 @@
   <!-- Second Gallery Marquee -->
   <div class="bg-ivory w-full overflow-hidden pb-16 md:pb-20">
     <div class="flex animate-marquee gap-3 md:gap-4" style="width:max-content;animation-play-state:running">
+      <div class="flex-shrink-0 overflow-hidden" style="height:340px;width:240px">
+        <img src="images/gallery/gallery-6.webp" alt="Wedding photo" class="h-full w-full object-cover" loading="lazy"
+          draggable="false" style="object-position:center 40%" />
+      </div>
+      <div class="flex-shrink-0 overflow-hidden" style="height:340px;width:240px">
+        <img src="images/gallery/gallery-7.webp" alt="Wedding photo" class="h-full w-full object-cover" loading="lazy"
+          draggable="false" style="object-position:center 35%" />
+      </div>
+      <div class="flex-shrink-0 overflow-hidden" style="height:340px;width:240px">
+        <img src="images/gallery/gallery-8.webp" alt="Wedding photo" class="h-full w-full object-cover" loading="lazy"
+          draggable="false" style="object-position:right 50%" />
+      </div>
+      <div class="flex-shrink-0 overflow-hidden" style="height:340px;width:240px">
+        <img src="images/gallery/gallery-9.webp" alt="Wedding photo" class="h-full w-full object-cover" loading="lazy"
+          draggable="false" style="object-position:center 30%" />
+      </div>
+      <div class="flex-shrink-0 overflow-hidden" style="height:340px;width:240px">
+        <img src="images/gallery/gallery-10.webp" alt="Wedding photo" class="h-full w-full object-cover" loading="lazy"
+          draggable="false" style="object-position:right 40%" />
+      </div>
       <div class="flex-shrink-0 overflow-hidden" style="height:340px;width:240px">
         <img src="images/gallery/gallery-6.webp" alt="Wedding photo" class="h-full w-full object-cover" loading="lazy"
           draggable="false" style="object-position:center 40%" />
@@ -669,68 +589,6 @@
               </div>
             </div>
           </div>
-
-          <!-- Guest Count -->
-          <!-- <div class="space-y-4">
-                <div class="flex items-center gap-2">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="w-4 h-4 text-[#c5a46d]">
-                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-                    <circle cx="9" cy="7" r="4"></circle>
-                    <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
-                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                  </svg>
-                  <label class="text-base text-sage-dark font-medium" data-i18n="rsvp.guests">How many guests?</label>
-                </div>
-                <div class="flex items-center gap-2">
-                  <button
-                    class="inline-flex items-center justify-center rounded-md text-sm font-medium border-2 bg-transparent h-10 w-10 border-[#c5a46d]/30 text-sage-dark hover:bg-[#c5a46d]/10"
-                    type="button" id="guestMinus" disabled>-</button>
-                  <span id="guestCount" class="w-10 text-center text-lg font-medium text-sage-dark">1</span>
-                  <button
-                    class="inline-flex items-center justify-center rounded-md text-sm font-medium border-2 bg-transparent h-10 w-10 border-[#c5a46d]/30 text-sage-dark hover:bg-[#c5a46d]/10"
-                    type="button" id="guestPlus">+</button>
-                </div>
-              </div> -->
-
-          <!-- Person Details -->
-          <!-- <div class="space-y-6">
-                <div class="p-4 bg-[#c5a46d]/5 rounded-lg space-y-4">
-                  <label class="text-sm text-sage-dark font-medium" data-i18n="rsvp.person1">Person (Main
-                    contact)</label>
-
-                  <input type="email"
-                    class="flex h-10 w-full rounded-md border px-3 py-2 text-sm bg-ivory border-[#c5a46d]/30 text-sage-dark placeholder:text-sage-dark/50 focus:border-[#c5a46d] focus:outline-none"
-                    required placeholder="Email address" data-i18n-placeholder="rsvp.email.placeholder" name="email" />
-                  <div class="space-y-2">
-                    <label class="font-medium text-sm text-sage-dark/80" for="dietary-0"
-                      data-i18n="rsvp.dietary.label">Dietary requirements</label>
-                    <input
-                      class="flex h-10 w-full rounded-md border px-3 py-2 text-sm bg-ivory border-[#c5a46d]/30 text-sage-dark placeholder:text-sage-dark/50 focus:border-[#c5a46d] focus:outline-none"
-                      id="dietary-0" placeholder="e.g. vegetarian, allergies, etc."
-                      data-i18n-placeholder="rsvp.dietary.placeholder" name="dietary" />
-                  </div>
-                </div>
-              </div> -->
-
-          <!-- Children -->
-          <!-- <div class="space-y-4">
-                <label class="text-sage-dark font-medium text-base" data-i18n="rsvp.children">Will any children be
-                  attending?</label>
-                <div role="radiogroup" class="flex flex-col gap-3" tabindex="0" style="outline:none">
-                  <div class="flex items-center space-x-2">
-                    <input type="radio" name="children" value="yes" id="children-yes" class="accent-[#c5a46d]" />
-                    <label class="text-sm font-medium cursor-pointer text-sage-dark" for="children-yes"
-                      data-i18n="rsvp.children.yes">Yes</label>
-                  </div>
-                  <div class="flex items-center space-x-2">
-                    <input type="radio" name="children" value="no" id="children-no" checked class="accent-[#c5a46d]" />
-                    <label class="text-sm font-medium cursor-pointer text-sage-dark" for="children-no"
-                      data-i18n="rsvp.children.no">No</label>
-                  </div>
-                </div>
-              </div> -->
 
           <!-- Message -->
           <div>
@@ -828,207 +686,7 @@
     })();
   </script>
 
-  <script>
-    // Countdown timer
-    (function () {
-      var targetDate = new Date("Oct 17, 2026 20:00:00").getTime();
-
-      function update() {
-        var diff = targetDate - Date.now();
-        if (diff < 0) {
-          document.getElementById("countdown").innerHTML = '<div class="relative max-w-xl mx-auto text-center"><h2 class="font-display text-4xl md:text-7xl text-sage-dark mb-1">The Big Day Has Arrived!</h2></div>';
-          clearInterval(timer);
-          return;
-        }
-        document.getElementById("days").innerText = Math.floor(diff / 86400000);
-        document.getElementById("hours").innerText = String(Math.floor((diff % 86400000) / 3600000)).padStart(2, "0");
-        document.getElementById("minutes").innerText = String(Math.floor((diff % 3600000) / 60000)).padStart(2, "0");
-        document.getElementById("seconds").innerText = String(Math.floor((diff % 60000) / 1000)).padStart(2, "0");
-      }
-
-      update();
-      var timer = setInterval(update, 1000);
-    })();
-  </script>
-
-  <script>
-    // Scroll reveal animation
-    (function () {
-      var targets = document.querySelectorAll("main > section:not(:first-of-type), main > div.bg-ivory, main > footer");
-      targets.forEach(function (el) { el.classList.add("reveal"); });
-
-      var observer = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.06, rootMargin: "0px 0px -30px 0px" });
-
-      targets.forEach(function (el) { observer.observe(el); });
-    })();
-  </script>
-
-
-  <script>
-    // RSVP form AJAX submission
-    (function () {
-      var form = document.getElementById("rsvpForm");
-      var successDiv = document.getElementById("rsvpSuccess");
-      var submitBtn = document.getElementById("rsvpSubmitBtn");
-
-      form.addEventListener("submit", function (e) {
-        e.preventDefault();
-        submitBtn.disabled = true;
-        submitBtn.innerHTML = '<span>Sending...</span>';
-
-        var formData = new FormData(form);
-
-        fetch(form.action, {
-          method: "POST",
-          body: formData,
-          headers: { 'Accept': 'application/json' }
-        }).then(function (response) {
-          if (response.ok) {
-            form.classList.add("hidden");
-            successDiv.classList.remove("hidden");
-          } else {
-            throw new Error("Form submission failed");
-          }
-        }).catch(function () {
-          submitBtn.disabled = false;
-          submitBtn.innerHTML = '<span>Something went wrong. Try again.</span>';
-          setTimeout(function () {
-            submitBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path><path d="m21.854 2.147-10.94 10.939"></path></svg><span data-i18n="rsvp.submit">Send RSVP</span>';
-          }, 3000);
-        });
-      });
-    })();
-  </script>
-
-  <script>
-    // i18n — Arabic/English toggle
-    (function () {
-      var AR = {
-        'wedding.date': '١٧ أكتوبر ٢٠٢٦',
-        'hero.subtitle': 'نحن نتزوج',
-        'hero.rsvp': 'تأكيد الحضور',
-        'countdown.title': 'العد التنازلي',
-        'countdown.until': 'حتى ١٧ أكتوبر ٢٠٢٦ · ٨:٠٠ مساءً',
-        'countdown.days': 'أيام',
-        'countdown.hours': 'ساعات',
-        'countdown.minutes': 'دقائق',
-        'countdown.seconds': 'ثواني',
-        'welcome.title': 'أهلاً وسهلاً!',
-        'welcome.body': 'يسعدنا دعوتكم للاحتفال معنا بيوم زفافنا. نتطلع إلى مشاركة هذه اللحظة التي لا تُنسى مع أحبائنا.',
-        'venue.title': 'مكان الحفل',
-        'venue.subtitle': 'حيث نحتفل',
-        'venue.street': 'فندق الماسة، شارع د. عبد العزيز الشناوي',
-        'venue.city': 'جامعة الأزهر - القاهرة',
-        'venue.openMaps': 'افتح في الخرائط',
-        'programme.title': 'برنامج الحفل',
-        'programme.arrival': 'الاستقبال',
-        'programme.katb': 'حفل كتب الكتاب',
-        'programme.cake': 'تقطيع الكعكة',
-        'programme.dinner': 'العشاء',
-        'programme.photos': 'جلسة التصوير',
-        'programme.finish': 'انتهاء الحفل',
-        'dresscode.title': 'قواعد اللباس',
-        'dresscode.women': 'السيدات',
-        'dresscode.women.desc': 'فستان كوكتيل أو سهرة',
-        'dresscode.men': 'الرجال',
-        'dresscode.men.desc': 'بدلة داكنة وربطة عنق',
-        'prewedding.label': 'فعاليات ما قبل الزفاف',
-        'prewedding.title': 'تعال قل مرحباً...',
-        'prewedding.desc': ' هذه تجمعات غير رسمية، فلا تتردد في الانضمام إلينا إذا كنت في المنطقة.',
-        'prewedding.drinks': 'مشروبات الترحيب',
-        'prewedding.drinks.date': 'الجمعة، ١١ سبتمبر ٢٠٢٦',
-        'prewedding.brunch': 'برانش الوداع',
-        'prewedding.brunch.date': 'الأحد، ١٣ سبتمبر ٢٠٢٦',
-        'location.title': 'الموقع والمواصلات',
-        'location.address': 'فندق الماسة، د. عبد العزيز الشناوي، جامعة الأزهر، القاهرة.',
-        'location.gmaps': 'خرائط جوجل',
-        'location.driving': 'من مالاجا: ~١:٣٠ ساعة عبر A-357 وA-367\nمن إشبيلية: ~ساعتان عبر A-376\nمن مربيلا: ~ساعة عبر A-397',
-        'accommodation.title': 'الإقامة',
-        'accommodation.subtitle': 'لا يوفر فندق الماسة خدمة الإقامة. إليكم بعض الخيارات المقترحة في المنطقة.',
-        'accommodation.dist1': '٢ كم من المكان',
-        'accommodation.dist2': '١٫٥ كم',
-        'accommodation.boutique': 'بوتيك | فوق الوادي',
-        'accommodation.visit': 'زيارة الموقع',
-        'accommodation.note': 'للفنادق غير المرتبطة باتفاقيات مباشرة، يرجى ذكر "حفل زفاف في فندق الماسة" للحصول على أسعار مفضلة.',
-        'gifts.title': 'الهدايا',
-        'gifts.desc': 'حضوركم هو أغلى هدية. إن أردتم منحنا شيئاً، فإليكم معلومات حساباتنا البنكية:',
-        'rsvp.title': 'تأكيد الحضور',
-        'rsvp.subtitle': 'أخبرنا إذا كنت ستحضر',
-        'rsvp.attending': 'هل ستحضر؟ *',
-        'rsvp.yes': 'نعم، سأكون هناك',
-        'rsvp.no': 'للأسف، لن أتمكن من الحضور',
-        'rsvp.guests': 'كم عدد الضيوف؟',
-        'rsvp.person1': 'الشخص الأول (جهة الاتصال الرئيسية)',
-        'rsvp.name.placeholder': 'الاسم الكامل',
-        'rsvp.email.placeholder': 'البريد الإلكتروني',
-        'rsvp.dietary.label': 'متطلبات غذائية',
-        'rsvp.dietary.placeholder': 'مثل: نباتي، حساسية، إلخ',
-        'rsvp.children': 'هل سيحضر أطفال؟',
-        'rsvp.children.yes': 'نعم',
-        'rsvp.children.no': 'لا',
-        'rsvp.message.label': 'رسالة للزوجين',
-        'rsvp.message.placeholder': 'هل هناك شيء تريد إخبارنا به؟',
-        'rsvp.submit': 'إرسال الرد',
-        'rsvp.thanks': 'شكراً لك!',
-        'rsvp.thanks.msg': 'نحن متحمسون للاحتفال معك! تم استلام ردك — نراك في الزفاف! 🎉'
-      };
-
-      var EN_TEXT = {}, EN_PLACEHOLDER = {};
-      document.querySelectorAll("[data-i18n]").forEach(function (el) {
-        var k = el.getAttribute("data-i18n");
-        if (!EN_TEXT[k]) EN_TEXT[k] = el.textContent.trim();
-      });
-      document.querySelectorAll("[data-i18n-placeholder]").forEach(function (el) {
-        var k = el.getAttribute("data-i18n-placeholder");
-        if (!EN_PLACEHOLDER[k]) EN_PLACEHOLDER[k] = el.placeholder;
-      });
-
-      function applyLanguage(lang) {
-        var isAR = lang === "ar";
-        var t = isAR ? AR : EN_TEXT;
-        var tp = isAR ? AR : EN_PLACEHOLDER;
-
-        document.documentElement.lang = lang;
-        document.body.dir = isAR ? "rtl" : "ltr";
-        history.replaceState(null, "", window.location.pathname + window.location.search + "#" + lang);
-
-        document.querySelectorAll("[data-i18n]").forEach(function (el) {
-          var v = t[el.getAttribute("data-i18n")];
-          if (v !== undefined) el.textContent = v;
-        });
-        document.querySelectorAll("[data-i18n-placeholder]").forEach(function (el) {
-          var v = tp[el.getAttribute("data-i18n-placeholder")];
-          if (v !== undefined) el.placeholder = v;
-        });
-
-        var btnEn = document.getElementById("btn-en");
-        var btnAr = document.getElementById("btn-ar");
-        if (btnEn && btnAr) {
-          var active = ["bg-sage-dark", "text-white"];
-          var inactive = ["text-sage-dark", "hover:bg-sage/10"];
-          [btnEn, btnAr].forEach(function (b) {
-            b.classList.remove.apply(b.classList, active.concat(inactive));
-          });
-          var actBtn = isAR ? btnAr : btnEn;
-          var inacBtn = isAR ? btnEn : btnAr;
-          active.forEach(function (c) { actBtn.classList.add(c); });
-          inactive.forEach(function (c) { inacBtn.classList.add(c); });
-        }
-      }
-
-      applyLanguage(window.location.hash === "#ar" ? "ar" : "en");
-
-      document.getElementById("btn-en").addEventListener("click", function () { applyLanguage("en"); });
-      document.getElementById("btn-ar").addEventListener("click", function () { applyLanguage("ar"); });
-    })();
-  </script>
+  <script src="js/main.js" defer></script>
 </body>
 
 </html>
