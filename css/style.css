@@ -439,7 +439,6 @@ body {
   background-color: hsl(var(--background));
   color: hsl(var(--foreground));
   font-family: var(--font-body);
-  background-image: url("9b0ee291995e1321584b655bf173b4d93bfbd54e.svg");
   background-blend-mode: overlay;
   background-size: 200px;
 }
