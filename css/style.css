@@ -3856,7 +3856,6 @@ h6 {
 
 body[dir="rtl"] .font-display:not(.font-en) {
   font-family: 'Amiri', serif;
-  letter-spacing: 0;
 }
 
 body[dir="rtl"] .font-en {
@@ -3866,11 +3865,6 @@ body[dir="rtl"] .font-en {
 
 body[dir="rtl"] .font-body {
   font-family: var(--font-body), 'Cairo', sans-serif;
-  letter-spacing: 0;
-}
-
-body[dir="rtl"] [class*="tracking-"] {
-  letter-spacing: 0 !important;
 }
 
 body[dir="rtl"] #btn-en,
@@ -3893,28 +3887,24 @@ body[dir="rtl"] .text-right {
   text-align: left !important;
 }
 
-body[dir="rtl"] .text-xs {
+body[dir="rtl"] .text-xs[data-i18n], body[dir="rtl"] .text-xs [data-i18n]  {
   font-size: 1rem !important;
 }
 
-body[dir="rtl"] .text-sm {
+body[dir="rtl"] .text-sm[data-i18n], body[dir="rtl"] .text-sm [data-i18n] {
   font-size: 1.125rem !important;
 }
 
-body[dir="rtl"] .text-me {
+body[dir="rtl"] .text-me[data-i18n], body[dir="rtl"] .text-me [data-i18n] {
   font-size: 1.25rem !important;
 }
 
-body[dir="rtl"] .text-base {
+body[dir="rtl"] .text-base[data-i18n], body[dir="rtl"] .text-base [data-i18n] {
   font-size: 1.125rem !important;
 }
 
-body[dir="rtl"] .text-lg {
+body[dir="rtl"] .text-lg[data-i18n], body[dir="rtl"] .text-lg [data-i18n] {
   font-size: 1.3rem !important;
-}
-
-body[dir="rtl"] [data-i18n="hero.rsvp"] {
-  font-size: 1.2rem !important;
 }
 
 body[dir="rtl"] [data-i18n^="countdown.days"],
@@ -3924,10 +3914,6 @@ body[dir="rtl"] [data-i18n^="countdown.seconds"] {
   font-size: 1rem !important;
 }
 
-body[dir="rtl"] .tracking-wide.font-medium {
-  font-size: 1.25rem !important;
-  margin-top: 0.75rem !important;
-}
 
 body[dir="rtl"] .uppercase {
   text-transform: none !important;
@@ -3970,7 +3956,6 @@ body[dir="rtl"] [dir="ltr"] {
   direction: ltr;
   unicode-bidi: isolate;
   font-family: var(--font-body), sans-serif !important;
-  letter-spacing: inherit !important;
   text-transform: inherit !important;
 }
 
@@ -3982,7 +3967,6 @@ body[dir="rtl"] [data-i18n="countdown.until"] {
   letter-spacing: 0.25em !important;
   text-transform: uppercase !important;
   font-size: 1rem !important;
-  margin-top: 0.75rem !important;
 }
 
 body[dir="rtl"] .programme-section .font-bold {

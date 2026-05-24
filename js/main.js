@@ -73,11 +73,9 @@
 // i18n — Arabic/English toggle
 (function () {
   var AR = {
-    'wedding.date': '17 October 2026',
     'hero.subtitle': 'احنا هنتجوز',
     'hero.rsvp': 'مستعد للاحتفال؟',
     'countdown.title': 'العد التنازلي',
-    'countdown.until': '17 October 2026 حتى',
     'countdown.days': 'أيام',
     'countdown.hours': 'ساعات',
     'countdown.minutes': 'دقائق',
