@@ -3918,6 +3918,13 @@ body[dir="rtl"] [data-i18n="hero.rsvp"] {
   font-size: 1.2rem !important;
 }
 
+body[dir="rtl"] [data-i18n^="countdown.days"],
+body[dir="rtl"] [data-i18n^="countdown.hours"],
+body[dir="rtl"] [data-i18n^="countdown.minutes"],
+body[dir="rtl"] [data-i18n^="countdown.seconds"] {
+  font-size: 1rem !important;
+}
+
 body[dir="rtl"] .tracking-wide.font-medium {
   font-size: 1.25rem !important;
   margin-top: 0.75rem !important;

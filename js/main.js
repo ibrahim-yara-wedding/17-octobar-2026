@@ -100,8 +100,8 @@
     'programme.photos': 'التصوير',
     'programme.finish': 'نهاية الفرح',
     'dresscode.women': 'المواصلات',
-    'dresscode.women.desc': 'لازم تركب عربية الجولف للوصول إلى قاعة حديقة اللونج، يرجى الاتصال بهذا الرقم إذا لم تجد واحدة',
-    'dresscode.men': 'مواقف السيارات',
+    'dresscode.women.desc': 'لازم تركب عربية جولف عشان توصل لقاعة حديقة اللونج، يرجى الاتصال بهذا الرقم لو ملقتش عربية',
+    'dresscode.men': 'ركنة العربيات',
     'dresscode.men.desc': 'ممكن تركن عربيتك في الشارع خارج فندق الماسة من غير رسوم أو داخل الفندق برسوم بسيطة بالساعة',
     'gifts.title': 'نوماً هنيًا للأطفال',
     'gifts.desc': 'دا فرح للكبار — استمتعوا بليلة هادية!',
@@ -145,6 +145,11 @@
       var v = tp[el.getAttribute("data-i18n-placeholder")];
       if (v !== undefined) el.placeholder = v;
     });
+
+    var golfCartImg = document.getElementById("golf-cart-img");
+    if (golfCartImg) {
+      golfCartImg.src = isAR ? "images/golf-cart-ar.jpg" : "images/golf-cart-en.jpg";
+    }
 
     var btnEn = document.getElementById("btn-en");
     var btnAr = document.getElementById("btn-ar");
