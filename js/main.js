@@ -148,7 +148,7 @@
 
     var golfCartImg = document.getElementById("golf-cart-img");
     if (golfCartImg) {
-      golfCartImg.src = isAR ? "images/golf-cart-ar.jpg" : "images/golf-cart-en.jpg";
+      golfCartImg.src = isAR ? "images/golf-cart-ar.webp" : "images/golf-cart-en.webp";
     }
 
     var btnEn = document.getElementById("btn-en");
