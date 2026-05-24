@@ -2418,11 +2418,11 @@ h6 {
     transform: translate(0);
   }
   to {
-    transform: translate(-33.33%);
+    transform: translate(-50%);
   }
 }
 .animate-marquee {
-  animation: marquee 30s linear infinite;
+  animation: marquee 90s linear infinite;
 }
 .animate-marquee:hover {
   animation-play-state: paused;
