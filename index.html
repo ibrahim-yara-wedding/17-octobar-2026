@@ -586,16 +586,11 @@
             so excited to celebrate with you! Your response has been received — see you at the wedding!</p>
         </div>
 
-        <form class="space-y-8" id="rsvpForm" action="https://formsubmit.co/d93a202800dbbb8d837ff4fe9df5e04b"
-          method="POST">
-          <!-- FormSubmit config -->
-          <input type="hidden" name="_subject" value="New Form Submission 💍" />
-          <input type="hidden" name="_template" value="table" />
-          <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="_guests" id="hiddenGuests" value="1" />
-
-          <!-- Honeypot (FormSubmit uses this automatically) -->
-          <input type="text" name="_honey" style="display:none" />
+        <form class="space-y-8" id="rsvpForm" method="POST">
+          <!-- web3forms config -->
+          <input type="hidden" name="access_key" value="a8247f3b-c596-4635-a870-6c412f8929e2">
+          <input type="hidden" name="subject" value="New Wedding Submission">
+          <input type="checkbox" name="botcheck" id="" style="display: none;">
 
           <!-- Attendance -->
           <div>

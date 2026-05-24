@@ -48,13 +48,19 @@
     submitBtn.innerHTML = '<span>Sending...</span>';
 
     var formData = new FormData(form);
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
 
-    fetch(form.action, {
-      method: "POST",
-      body: formData,
-      headers: { 'Accept': 'application/json' }
-    }).then(function (response) {
-      if (response.ok) {
+    fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+          },
+          body: json
+      }).then(async (response) => {
+      let json = await response.json();
+      if (response.status == 200) {
         form.classList.add("hidden");
         successDiv.classList.remove("hidden");
       } else {
