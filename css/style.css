@@ -2421,7 +2421,7 @@ h6 {
   }
 }
 .animate-marquee {
-  animation: marquee 90s linear infinite;
+  animation: marquee 60s linear infinite;
 }
 .animate-marquee:hover {
   animation-play-state: paused;
@@ -3905,6 +3905,10 @@ body[dir="rtl"] .text-base[data-i18n], body[dir="rtl"] .text-base [data-i18n] {
 
 body[dir="rtl"] .text-lg[data-i18n], body[dir="rtl"] .text-lg [data-i18n] {
   font-size: 1.3rem !important;
+}
+
+[data-i18n] {
+  letter-spacing: 0 !important;  
 }
 
 body[dir="rtl"] [data-i18n^="countdown.days"],
