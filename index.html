@@ -14,13 +14,15 @@
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Wedding Ibrahim &amp; Yara" />
-  <meta property="og:description" content="You are invited to celebrate the wedding of Ibrahim &amp; Yara — 17 October 2026" />
+  <meta property="og:description"
+    content="You are invited to celebrate the wedding of Ibrahim &amp; Yara — 17 October 2026" />
   <meta property="og:image" content="images/intro-poster.webp" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Wedding Ibrahim &amp; Yara" />
-  <meta name="twitter:description" content="You are invited to celebrate the wedding of Ibrahim &amp; Yara — 17 October 2026" />
+  <meta name="twitter:description"
+    content="You are invited to celebrate the wedding of Ibrahim &amp; Yara — 17 October 2026" />
   <meta name="twitter:image" content="images/intro-poster.webp" />
 
   <!-- Favicon & Manifest -->
@@ -31,7 +33,9 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Amiri:ital@0;1&family=Cairo:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Amiri:ital@0;1&family=Cairo:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
 
   <!-- Preload critical assets -->
   <link rel="preload" as="image" href="images/intro-poster.webp" fetchpriority="high" />
@@ -48,31 +52,99 @@
         transform 0.95s cubic-bezier(0.22, 1, 0.36, 1);
       will-change: opacity, transform;
     }
+
     .reveal.visible {
       opacity: 1;
       transform: translateY(0) scale(1);
     }
-    body[dir="rtl"] .font-display:not(.font-en) { font-family: 'Amiri', serif; letter-spacing: 0; }
-    body[dir="rtl"] .font-en { font-family: 'Pinyon Script', cursive !important; letter-spacing: initial !important; }
-    body[dir="rtl"] .font-body { font-family: var(--font-body), 'Cairo', sans-serif; letter-spacing: 0; }
-    body[dir="rtl"] [class*="tracking-"] { letter-spacing: 0 !important; }
-    body[dir="rtl"] .text-left { text-align: right !important; }
-    body[dir="rtl"] .text-right { text-align: left !important; }
-    body[dir="rtl"] .text-xs { font-size: 0.875rem !important; }
-    body[dir="rtl"] .text-sm { font-size: 1rem !important; }
-    body[dir="rtl"] .text-me { font-size: 1.3rem !important; }
-    body[dir="rtl"] .uppercase { text-transform: none !important; }
-    body[dir="rtl"] .programme-section .flex.items-center { flex-direction: row-reverse; }
-    body[dir="rtl"] .programme-section .w-1\/2.pr-8 { padding-right: 2rem !important; padding-left: 0 !important; }
-    body[dir="rtl"] .programme-section .w-1\/2.pl-8 { padding-left: 2rem !important; padding-right: 0 !important; }
-    body[dir="rtl"] .programme-section .text-right { text-align: right !important; }
-    body[dir="rtl"] .programme-section .text-left { text-align: left !important; }
-    body[dir="rtl"] .animate-marquee { direction: ltr; }
-    body[dir="rtl"] { overflow-x: hidden; }
-    body[dir="rtl"] .reveal { transform: translateY(52px) !important; will-change: auto; }
-    body[dir="rtl"] .reveal.visible { transform: translateY(0) !important; }
-    body[dir="rtl"] [role="radiogroup"] { direction: rtl; }
-    body[dir="rtl"] [role="radiogroup"] .space-x-2 > :not([hidden]) ~ :not([hidden]) {
+
+    body[dir="rtl"] .font-display:not(.font-en) {
+      font-family: 'Amiri', serif;
+      letter-spacing: 0;
+    }
+
+    body[dir="rtl"] .font-en {
+      font-family: 'Pinyon Script', cursive !important;
+      letter-spacing: initial !important;
+    }
+
+    body[dir="rtl"] .font-body {
+      font-family: var(--font-body), 'Cairo', sans-serif;
+      letter-spacing: 0;
+    }
+
+    body[dir="rtl"] [class*="tracking-"] {
+      letter-spacing: 0 !important;
+    }
+
+    body[dir="rtl"] .text-left {
+      text-align: right !important;
+    }
+
+    body[dir="rtl"] .text-right {
+      text-align: left !important;
+    }
+
+    body[dir="rtl"] .text-xs {
+      font-size: 0.875rem !important;
+    }
+
+    body[dir="rtl"] .text-sm {
+      font-size: 1rem !important;
+    }
+
+    body[dir="rtl"] .text-me {
+      font-size: 1.3rem !important;
+    }
+
+    body[dir="rtl"] .uppercase {
+      text-transform: none !important;
+    }
+
+    body[dir="rtl"] .programme-section .flex.items-center {
+      flex-direction: row-reverse;
+    }
+
+    body[dir="rtl"] .programme-section .w-1\/2.pr-8 {
+      padding-right: 2rem !important;
+      padding-left: 0 !important;
+    }
+
+    body[dir="rtl"] .programme-section .w-1\/2.pl-8 {
+      padding-left: 2rem !important;
+      padding-right: 0 !important;
+    }
+
+    body[dir="rtl"] .programme-section .text-right {
+      text-align: right !important;
+    }
+
+    body[dir="rtl"] .programme-section .text-left {
+      text-align: left !important;
+    }
+
+    body[dir="rtl"] .animate-marquee {
+      direction: ltr;
+    }
+
+    body[dir="rtl"] {
+      overflow-x: hidden;
+    }
+
+    body[dir="rtl"] .reveal {
+      transform: translateY(52px) !important;
+      will-change: auto;
+    }
+
+    body[dir="rtl"] .reveal.visible {
+      transform: translateY(0) !important;
+    }
+
+    body[dir="rtl"] [role="radiogroup"] {
+      direction: rtl;
+    }
+
+    body[dir="rtl"] [role="radiogroup"] .space-x-2> :not([hidden])~ :not([hidden]) {
       margin-left: 0 !important;
       margin-right: 0.5rem !important;
     }
@@ -83,15 +155,18 @@
   <!-- Intro Video Overlay -->
   <div id="root_1" style="position:fixed;inset:0;z-index:100;transition:opacity 1s ease">
     <div class="fixed inset-0 z-50 cursor-pointer bg-white" style="opacity:1">
-      <img src="images/intro-poster.webp" alt="Wedding invitation cover" class="absolute inset-0 w-full h-full object-cover opacity-100" draggable="false" style="transition:opacity 50ms ease-out" />
-      <video id="bgVideo" poster="images/intro-poster.webp" muted playsinline webkit-playsinline preload="metadata" class="absolute inset-0 w-full h-full object-cover">
+      <img src="images/intro-poster.webp" alt="Wedding invitation cover"
+        class="absolute inset-0 w-full h-full object-cover opacity-100" draggable="false"
+        style="transition:opacity 50ms ease-out" />
+      <video id="bgVideo" poster="images/intro-poster.webp" muted playsinline webkit-playsinline preload="metadata"
+        class="absolute inset-0 w-full h-full object-cover">
         <source src="videos/intro-video.mp4" type="video/mp4" />
       </video>
 
       <script>
         var video = document.getElementById("bgVideo");
         document.addEventListener("click", function () {
-          video.play().catch(function () {});
+          video.play().catch(function () { });
           document.getElementById("heroVideo").load();
         }, { once: true });
 
@@ -115,26 +190,34 @@
   <div id="root" style="display:none;opacity:0;transition:opacity 1s ease">
     <main class="bg-background">
       <!-- Language Toggle -->
-      <div class="fixed top-4 right-4 z-50 flex gap-1 bg-white/90 backdrop-blur-sm border border-sage/30 shadow-md rounded-full p-1">
-        <button id="btn-en" class="px-3 py-1.5 rounded-full text-sm font-body font-medium transition-colors bg-sage-dark text-white">EN</button>
-        <button id="btn-ar" class="px-3 py-1.5 rounded-full text-sm font-body font-medium transition-colors text-sage-dark hover:bg-sage/10">AR</button>
+      <div
+        class="fixed top-4 right-4 z-50 flex gap-1 bg-white/90 backdrop-blur-sm border border-sage/30 shadow-md rounded-full p-1">
+        <button id="btn-en"
+          class="px-3 py-1.5 rounded-full text-sm font-body font-medium transition-colors bg-sage-dark text-white">EN</button>
+        <button id="btn-ar"
+          class="px-3 py-1.5 rounded-full text-sm font-body font-medium transition-colors text-sage-dark hover:bg-sage/10">AR</button>
       </div>
 
       <!-- Hero Section -->
       <section class="relative min-h-screen flex flex-col overflow-hidden bg-white">
         <div class="absolute inset-0 overflow-hidden">
-          <video id="heroVideo" muted loop playsinline webkit-playsinline preload="none" class="absolute inset-0 w-full h-full object-cover">
+          <video id="heroVideo" muted loop playsinline webkit-playsinline preload="none"
+            class="absolute inset-0 w-full h-full object-cover">
             <source src="videos/hero-video.mp4" type="video/mp4" />
           </video>
           <div class="absolute inset-0 bg-black/30"></div>
         </div>
         <div class="relative z-10 flex-1 flex flex-col">
           <div class="flex flex-col items-center text-center px-6 pt-20 md:pt-28">
-            <p class="text-me md:text-base tracking-[0.4em] uppercase text-white mb-4 font-body font-semibold drop-shadow-lg" data-i18n="hero.subtitle">We're getting married</p>
+            <p class="text-me md:text-base tracking-[0.4em] uppercase text-white mb-4 font-body font-semibold drop-shadow-lg"
+              data-i18n="hero.subtitle">We're getting married</p>
             <h1 class="mb-0">
-              <span class="font-display font-en font-normal text-6xl md:text-8xl lg:text-9xl text-white block leading-[0.9] drop-shadow-lg">Ibrahim</span>
-              <span class="font-display font-en font-normal text-3xl md:text-4xl text-white my-4 block italic drop-shadow-lg">&amp;</span>
-              <span class="font-display font-en font-normal text-6xl md:text-8xl lg:text-9xl text-white block leading-[0.9] drop-shadow-lg">Yara</span>
+              <span
+                class="font-display font-en font-normal text-6xl md:text-8xl lg:text-9xl text-white block leading-[0.9] drop-shadow-lg">Ibrahim</span>
+              <span
+                class="font-display font-en font-normal text-3xl md:text-4xl text-white my-4 block italic drop-shadow-lg">&amp;</span>
+              <span
+                class="font-display font-en font-normal text-6xl md:text-8xl lg:text-9xl text-white block leading-[0.9] drop-shadow-lg">Yara</span>
             </h1>
           </div>
           <div class="flex-1"></div>
@@ -144,48 +227,60 @@
               <span class="text-white text-xl drop-shadow-lg">&#10022;</span>
               <span class="h-px bg-white/70 w-12 md:w-24"></span>
             </div>
-            <p class="text-2xl md:text-4xl font-body tracking-widest text-white drop-shadow-lg font-light" data-i18n="wedding.date">17 October 2026</p>
+            <p class="text-2xl md:text-4xl font-body tracking-widest text-white drop-shadow-lg font-light"
+              data-i18n="wedding.date">17 October 2026</p>
           </div>
         </div>
-        <button class="relative z-10 flex flex-col items-center gap-2 text-center text-white hover:text-gold transition-colors cursor-pointer pb-8" onclick="document.getElementById('rsvp').scrollIntoView({behavior:'smooth'})">
-          <span class="text-xs tracking-[0.3em] uppercase font-body drop-shadow-lg" data-i18n="hero.rsvp">RSVP</span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 drop-shadow-lg">
+        <button
+          class="relative z-10 flex flex-col items-center gap-2 text-center text-white hover:text-gold transition-colors cursor-pointer pb-8"
+          onclick="document.getElementById('rsvp').scrollIntoView({behavior:'smooth'})">
+          <span class="text-xs tracking-[0.3em] uppercase font-body drop-shadow-lg" data-i18n="hero.rsvp">Ready to
+            Celebrate?</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="w-5 h-5 drop-shadow-lg">
             <path d="m6 9 6 6 6-6"></path>
           </svg>
         </button>
       </section>
 
       <!-- Countdown Section -->
-      <section id="countdown" class="py-16 md:py-20 px-4 relative overflow-hidden" style="background-image:url('images/textured-paper-bg.webp');background-size:cover;background-position:center">
+      <section id="countdown" class="py-16 md:py-20 px-4 relative overflow-hidden"
+        style="background-image:url('images/textured-paper-bg.webp');background-size:cover;background-position:center">
         <div class="relative max-w-2xl mx-auto text-center">
           <h2 class="font-display text-4xl md:text-7xl text-sage-dark mb-1" data-i18n="countdown.title">Countdown</h2>
-          <p class="text-sage-dark/60 text-sm font-body tracking-[0.25em] uppercase mb-10" data-i18n="countdown.until">Until 17 October 2026 - 8:00 PM</p>
+          <p class="text-sage-dark/60 text-sm font-body tracking-[0.25em] uppercase mb-10" data-i18n="countdown.until">
+            Until 17 October 2026</p>
           <div class="flex items-center justify-center flex-wrap">
             <div class="flex items-center">
               <div class="flex flex-col items-center px-4 md:px-7">
                 <span id="days" class="font-display text-4xl md:text-6xl text-sage-dark leading-none">00</span>
-                <span class="mt-2 text-[10px] tracking-[0.25em] uppercase text-gold/80 font-body" data-i18n="countdown.days">Days</span>
+                <span class="mt-2 text-[10px] tracking-[0.25em] uppercase text-gold/80 font-body"
+                  data-i18n="countdown.days">Days</span>
               </div>
               <span class="w-px h-8 bg-sage-dark/20 mx-1 mb-4"></span>
             </div>
             <div class="flex items-center">
               <div class="flex flex-col items-center px-4 md:px-7">
                 <span id="hours" class="font-display text-4xl md:text-6xl text-sage-dark leading-none">00</span>
-                <span class="mt-2 text-[10px] tracking-[0.25em] uppercase text-gold/80 font-body" data-i18n="countdown.hours">Hours</span>
+                <span class="mt-2 text-[10px] tracking-[0.25em] uppercase text-gold/80 font-body"
+                  data-i18n="countdown.hours">Hours</span>
               </div>
               <span class="w-px h-8 bg-sage-dark/20 mx-1 mb-4"></span>
             </div>
             <div class="flex items-center">
               <div class="flex flex-col items-center px-4 md:px-7">
                 <span id="minutes" class="font-display text-4xl md:text-6xl text-sage-dark leading-none">00</span>
-                <span class="mt-2 text-[10px] tracking-[0.25em] uppercase text-gold/80 font-body" data-i18n="countdown.minutes">Minutes</span>
+                <span class="mt-2 text-[10px] tracking-[0.25em] uppercase text-gold/80 font-body"
+                  data-i18n="countdown.minutes">Minutes</span>
               </div>
               <span class="w-px h-8 bg-sage-dark/20 mx-1 mb-4"></span>
             </div>
             <div class="flex items-center">
               <div class="flex flex-col items-center px-4 md:px-7">
                 <span id="seconds" class="font-display text-4xl md:text-6xl text-sage-dark leading-none">00</span>
-                <span class="mt-2 text-[10px] tracking-[0.25em] uppercase text-gold/80 font-body" data-i18n="countdown.seconds">Seconds</span>
+                <span class="mt-2 text-[10px] tracking-[0.25em] uppercase text-gold/80 font-body"
+                  data-i18n="countdown.seconds">Seconds</span>
               </div>
             </div>
           </div>
@@ -197,422 +292,390 @@
         <div class="max-w-3xl mx-auto text-center mb-12 md:mb-16">
           <h2 class="font-display text-4xl md:text-7xl text-sage-dark mb-6" data-i18n="welcome.title">Welcome!</h2>
           <div class="text-sage-dark/90 font-body text-lg leading-relaxed italic">
-            <p data-i18n="welcome.body">We warmly invite you to celebrate our wedding day with us in the beautiful town of Ronda, Andalusia. We look forward to sharing this unforgettable moment with our most special people.</p>
+            <p data-i18n="welcome.body">We warmly invite you to celebrate our wedding day with us. We look forward to
+              sharing this unforgettable moment with our most special people.</p>
           </div>
         </div>
         <div class="w-full overflow-hidden">
           <div class="flex animate-marquee gap-3 md:gap-4" style="width:max-content;animation-play-state:running">
             <div class="flex-shrink-0 overflow-hidden" style="height:340px;width:240px">
-              <img src="images/gallery/gallery-1.webp" alt="Wedding photo" class="h-full w-full object-cover" loading="lazy" draggable="false" style="object-position:center 20%" />
+              <img src="images/gallery/gallery-1.webp" alt="Wedding photo" class="h-full w-full object-cover"
+                loading="lazy" draggable="false" style="object-position:center 20%" />
             </div>
             <div class="flex-shrink-0 overflow-hidden" style="height:340px;width:240px">
-              <img src="images/gallery/gallery-2.webp" alt="Wedding photo" class="h-full w-full object-cover" loading="lazy" draggable="false" style="object-position:center 55%" />
+              <img src="images/gallery/gallery-2.webp" alt="Wedding photo" class="h-full w-full object-cover"
+                loading="lazy" draggable="false" style="object-position:center 55%" />
             </div>
             <div class="flex-shrink-0 overflow-hidden" style="height:340px;width:240px">
-              <img src="images/gallery/gallery-3.webp" alt="Wedding photo" class="h-full w-full object-cover" loading="lazy" draggable="false" style="object-position:center 30%" />
+              <img src="images/gallery/gallery-3.webp" alt="Wedding photo" class="h-full w-full object-cover"
+                loading="lazy" draggable="false" style="object-position:center 30%" />
             </div>
             <div class="flex-shrink-0 overflow-hidden" style="height:340px;width:240px">
-              <img src="images/gallery/gallery-4.webp" alt="Wedding photo" class="h-full w-full object-cover" loading="lazy" draggable="false" style="object-position:center 40%" />
+              <img src="images/gallery/gallery-4.webp" alt="Wedding photo" class="h-full w-full object-cover"
+                loading="lazy" draggable="false" style="object-position:center 40%" />
             </div>
             <div class="flex-shrink-0 overflow-hidden" style="height:340px;width:240px">
-              <img src="images/gallery/gallery-5.webp" alt="Wedding photo" class="h-full w-full object-cover" loading="lazy" draggable="false" style="object-position:center 35%" />
+              <img src="images/gallery/gallery-5.webp" alt="Wedding photo" class="h-full w-full object-cover"
+                loading="lazy" draggable="false" style="object-position:center 35%" />
             </div>
             <div class="flex-shrink-0 overflow-hidden" style="height:340px;width:240px">
-              <img src="images/gallery/gallery-1.webp" alt="Wedding photo" class="h-full w-full object-cover" loading="lazy" draggable="false" style="object-position:center 20%" />
+              <img src="images/gallery/gallery-1.webp" alt="Wedding photo" class="h-full w-full object-cover"
+                loading="lazy" draggable="false" style="object-position:center 20%" />
             </div>
             <div class="flex-shrink-0 overflow-hidden" style="height:340px;width:240px">
-              <img src="images/gallery/gallery-2.webp" alt="Wedding photo" class="h-full w-full object-cover" loading="lazy" draggable="false" style="object-position:center 55%" />
+              <img src="images/gallery/gallery-2.webp" alt="Wedding photo" class="h-full w-full object-cover"
+                loading="lazy" draggable="false" style="object-position:center 55%" />
             </div>
             <div class="flex-shrink-0 overflow-hidden" style="height:340px;width:240px">
-              <img src="images/gallery/gallery-3.webp" alt="Wedding photo" class="h-full w-full object-cover" loading="lazy" draggable="false" style="object-position:center 30%" />
+              <img src="images/gallery/gallery-3.webp" alt="Wedding photo" class="h-full w-full object-cover"
+                loading="lazy" draggable="false" style="object-position:center 30%" />
             </div>
             <div class="flex-shrink-0 overflow-hidden" style="height:340px;width:240px">
-              <img src="images/gallery/gallery-4.webp" alt="Wedding photo" class="h-full w-full object-cover" loading="lazy" draggable="false" style="object-position:center 40%" />
+              <img src="images/gallery/gallery-4.webp" alt="Wedding photo" class="h-full w-full object-cover"
+                loading="lazy" draggable="false" style="object-position:center 40%" />
             </div>
             <div class="flex-shrink-0 overflow-hidden" style="height:340px;width:240px">
-              <img src="images/gallery/gallery-5.webp" alt="Wedding photo" class="h-full w-full object-cover" loading="lazy" draggable="false" style="object-position:center 35%" />
+              <img src="images/gallery/gallery-5.webp" alt="Wedding photo" class="h-full w-full object-cover"
+                loading="lazy" draggable="false" style="object-position:center 35%" />
             </div>
           </div>
         </div>
       </section>
 
       <!-- Floral Divider -->
-      <div class="bg-ivory flex flex-col items-center py-16 md:py-20">
+      <div class="bg-ivory flex flex-col items-center py-16 md:py-16">
         <div class="w-24 h-px bg-sage-dark/20 mb-10"></div>
-        <img src="images/illustrations/floral-vase.webp" alt="" class="w-32 md:w-40 h-auto opacity-80" loading="lazy" decoding="async" />
+        <img src="images/illustrations/floral-vase.webp" alt="" class="w-32 md:w-40 h-auto opacity-80" loading="lazy"
+          decoding="async" />
       </div>
 
       <!-- Venue Section -->
       <section class="section-padding" style="background-color:rgb(197,164,109)">
         <div class="max-w-3xl mx-auto">
-          <div class="text-center mb-12">
+          <div class="text-center mb-8">
             <h2 class="font-display text-4xl md:text-7xl mb-2" style="color:rgb(249,247,242)" data-i18n="venue.title">The Venue</h2>
             <p class="font-body tracking-wide font-medium" style="color:rgb(249,247,242)" data-i18n="venue.subtitle">Where we celebrate</p>
           </div>
-          <div class="bg-white rounded-2xl border border-gold/20 p-8 shadow-lg text-center">
-            <img src="images/hotel-photo.webp" alt="Almasa Hotel" class="w-full max-w-lg h-auto mx-auto mb-2" loading="lazy" decoding="async" />
-            <h3 class="font-display text-3xl md:text-4xl text-sage-dark mb-6 border-b border-gold/20 pb-4">Almasa Hotel</h3>
-            <div class="space-y-5 mb-8">
-              <div class="flex items-center justify-center gap-3 text-sage-dark">
-                <span class="font-body text-base tracking-wide italic opacity-70">17 October 2026</span>
-                <span class="text-gold/40">&middot;</span>
-                <span class="font-display text-2xl">8:00 PM</span>
-              </div>
-              <div class="w-12 h-px bg-gold/30 mx-auto"></div>
-              <div class="flex flex-col items-center gap-1 text-sage-dark">
-                <span class="font-body text-base tracking-wide" data-i18n="venue.street">Almasa Hotel, Dr Abd El-Aziz El-Shennawy Street</span>
-                <span class="font-body text-sm tracking-wide opacity-70" data-i18n="venue.city">Gameat AlAzhar - Cairo</span>
-              </div>
-            </div>
-            <div class="w-full rounded-xl overflow-hidden mb-6" style="height:240px">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d110515.24138001153!2d31.2883702!3d30.0482944!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583e51103c0615%3A0xc2eb3aec54a78cbc!2sAl%20Masa%20Hotel%20Nasr%20City!5e0!3m2!1sen!2seg!4v1779378015373!5m2!1sen!2seg" width="100%" height="240" style="border:0;filter:sepia(0.25) saturate(0.6) hue-rotate(5deg) brightness(1.05)" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Almasa Hotel location on Google Maps"></iframe>
-            </div>
-            <a href="https://maps.app.goo.gl/JX4ToKPT3hERWnAw6" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 font-body text-sm tracking-[0.15em] uppercase text-sage-dark/70 hover:text-gold transition-colors border-b border-gold/30 hover:border-gold pb-1">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5">
-                <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
-                <circle cx="12" cy="10" r="3"></circle>
-              </svg>
-              <span data-i18n="venue.openMaps">Open in Maps</span>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- Divider -->
-      <div class="bg-ivory flex justify-center py-16 md:py-20">
-        <div class="w-24 h-px bg-sage-dark/20"></div>
-      </div>
-
-      <!-- Programme Section -->
-      <section class="section-padding relative overflow-hidden" style="background-image:url('images/textured-paper-bg.webp');background-size:cover;background-position:center">
-        <div class="max-w-2xl mx-auto programme-section">
-          <div class="text-center mb-12">
-            <h2 class="font-display text-4xl md:text-7xl text-sage-dark mb-2" data-i18n="programme.title">Day Programme</h2>
-            <p class="text-gold font-body tracking-wide font-medium" data-i18n="wedding.date">17 October 2026</p>
-          </div>
-          <div class="relative">
-            <div class="absolute left-1/2 top-3 bottom-3 w-px bg-sage-dark/40 -translate-x-1/2"></div>
-            <div class="space-y-0">
-              <div class="relative flex items-center py-3">
-                <div class="absolute left-1/2 -translate-x-1/2 w-4 h-px bg-sage-dark/40"></div>
-                <div class="w-1/2 pr-8 text-right"></div>
-                <div class="w-1/2 pl-8 text-left">
-                  <p class="font-body font-bold text-sage-dark tracking-[0.15em] text-sm md:text-base">8:00 PM</p>
-                  <p class="font-body text-sage-dark/80 tracking-[0.15em] uppercase text-xs md:text-sm mt-0.5" data-i18n="programme.arrival">Arrival</p>
+          <div class="bg-white rounded-2xl border border-gold/20 shadow-lg overflow-hidden">
+            <!-- Full-width image inside card -->
+            <img src="images/hotel-photo.webp" alt="Almasa Hotel" class="w-full h-56 md:h-72 object-cover" loading="lazy" decoding="async" />
+            <!-- Details below -->
+            <div class="p-8 md:p-10 text-center">
+              <h3 class="font-display text-4xl md:text-5xl text-sage-dark mb-6 border-b border-gold/20 pb-4">Almasa Hotel</h3>
+              <div class="space-y-5 mb-3">
+                <div class="flex items-center justify-center gap-3 text-sage-dark">
+                  <span class="font-body text-base tracking-wide italic opacity-70">17 October 2026 - 8:00 PM</span>
+                  <!-- <span class="text-gold/40">&middot;</span>
+                  <span class="font-display text-2xl">8:00 PM</span> -->
+                </div>
+                <div class="w-12 h-px bg-gold/30 mx-auto"></div>
+                <div class="flex flex-col items-center gap-1 text-sage-dark">
+                  <!-- <span class="font-body text-base tracking-wide" data-i18n="venue.street"></span> -->
+                  <span class="font-body text-sm tracking-wide opacity-70" data-i18n="venue.city">Almasa Hotel, Dr Abd El-Aziz El-Shennawy Street, Gameat AlAzhar - Cairo</span>
                 </div>
               </div>
-              <div class="relative flex items-center py-3">
-                <div class="absolute left-1/2 -translate-x-1/2 w-4 h-px bg-sage-dark/40"></div>
-                <div class="w-1/2 pr-8 text-right">
-                  <p class="font-body font-bold text-sage-dark tracking-[0.15em] text-sm md:text-base">8:30 PM</p>
-                  <p class="font-body text-sage-dark/80 tracking-[0.15em] uppercase text-xs md:text-sm mt-0.5" data-i18n="programme.katb">Katb Ketab Ceremony</p>
-                </div>
-                <div class="w-1/2 pl-8 text-left"></div>
+              <div class="w-full rounded-xl overflow-hidden mb-6" style="height:220px">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d110515.24138001153!2d31.2883702!3d30.0482944!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583e51103c0615%3A0xc2eb3aec54a78cbc!2sAl%20Masa%20Hotel%20Nasr%20City!5e0!3m2!1sen!2seg!4v1779378015373!5m2!1sen!2seg"
+                  width="100%" height="220" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Almasa Hotel location on Google Maps"></iframe>
               </div>
-              <div class="relative flex items-center py-3">
-                <div class="absolute left-1/2 -translate-x-1/2 w-4 h-px bg-sage-dark/40"></div>
-                <div class="w-1/2 pr-8 text-right"></div>
-                <div class="w-1/2 pl-8 text-left">
-                  <p class="font-body font-bold text-sage-dark tracking-[0.15em] text-sm md:text-base">9:45 PM</p>
-                  <p class="font-body text-sage-dark/80 tracking-[0.15em] uppercase text-xs md:text-sm mt-0.5" data-i18n="programme.cake">Cutting the Cake</p>
-                </div>
-              </div>
-              <div class="relative flex items-center py-3">
-                <div class="absolute left-1/2 -translate-x-1/2 w-4 h-px bg-sage-dark/40"></div>
-                <div class="w-1/2 pr-8 text-right">
-                  <p class="font-body font-bold text-sage-dark tracking-[0.15em] text-sm md:text-base">10:00 PM</p>
-                  <p class="font-body text-sage-dark/80 tracking-[0.15em] uppercase text-xs md:text-sm mt-0.5" data-i18n="programme.dinner">Dinner</p>
-                </div>
-                <div class="w-1/2 pl-8 text-left"></div>
-              </div>
-              <div class="relative flex items-center py-3">
-                <div class="absolute left-1/2 -translate-x-1/2 w-4 h-px bg-sage-dark/40"></div>
-                <div class="w-1/2 pr-8 text-right"></div>
-                <div class="w-1/2 pl-8 text-left">
-                  <p class="font-body font-bold text-sage-dark tracking-[0.15em] text-sm md:text-base">11:30 PM</p>
-                  <p class="font-body text-sage-dark/80 tracking-[0.15em] uppercase text-xs md:text-sm mt-0.5" data-i18n="programme.photos">Photos</p>
-                </div>
-              </div>
-              <div class="relative flex items-center py-3">
-                <div class="absolute left-1/2 -translate-x-1/2 w-4 h-px bg-sage-dark/40"></div>
-                <div class="w-1/2 pr-8 text-right">
-                  <p class="font-body font-bold text-sage-dark tracking-[0.15em] text-sm md:text-base">12:00 AM</p>
-                  <p class="font-body text-sage-dark/80 tracking-[0.15em] uppercase text-xs md:text-sm mt-0.5" data-i18n="programme.finish">Finish</p>
-                </div>
-                <div class="w-1/2 pl-8 text-left"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Champagne Divider -->
-      <div class="bg-ivory flex justify-center py-16 md:py-20">
-        <img src="images/illustrations/champagne-tower.webp" alt="" class="w-32 md:w-40 h-auto opacity-80" loading="lazy" decoding="async" />
-      </div>
-
-      <!-- Dress Code Section -->
-      <section class="relative overflow-hidden">
-        <img src="images/hotel-photo.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover object-bottom" />
-        <div class="relative z-10 px-6 md:px-16 py-10 md:py-16">
-          <div class="max-w-4xl mx-auto flex justify-center">
-            <div class="bg-white/90 backdrop-blur-sm rounded-2xl border border-sage/30 p-8 md:p-12 shadow-lg text-center w-full max-w-2xl">
-              <h2 class="font-display text-4xl md:text-7xl text-sage-dark mb-8" data-i18n="dresscode.title">Dress Code</h2>
-              <div class="mb-8">
-                <h3 class="font-display text-3xl md:text-4xl text-sage-dark mb-2" data-i18n="dresscode.women">Women</h3>
-                <p class="text-sage-dark/70 font-body text-sm italic leading-relaxed max-w-md mx-auto" data-i18n="dresscode.women.desc">Cocktail or formal dress</p>
-              </div>
-              <div class="w-16 h-px bg-sage/30 mx-auto mb-8"></div>
-              <div>
-                <h3 class="font-display text-3xl md:text-4xl text-sage-dark mb-2" data-i18n="dresscode.men">Men</h3>
-                <p class="text-sage-dark/70 font-body text-sm italic leading-relaxed max-w-md mx-auto" data-i18n="dresscode.men.desc">Dark suit and tie</p>
-              </div>
+              <a href="https://maps.app.goo.gl/JX4ToKPT3hERWnAw6" target="_blank" rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 font-body text-sm tracking-[0.15em] uppercase text-sage-dark/70 hover:text-gold transition-colors border-b border-gold/30 hover:border-gold pb-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5">
+                  <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span data-i18n="venue.openMaps">Open in Maps</span>
+              </a>
             </div>
           </div>
         </div>
       </section>
 
       <!-- Bow Divider -->
-      <div class="bg-ivory flex flex-col items-center py-16 md:py-20">
-        <img src="images/illustrations/bow.webp" alt="" class="w-16 md:w-20 h-auto opacity-80" loading="lazy" decoding="async" />
+      <div class="bg-ivory flex justify-center py-16 md:py-16">
+        <img src="images/illustrations/bow.webp" alt="" class="w-20 md:w-24 h-auto opacity-80" loading="lazy"
+          decoding="async" />
       </div>
 
-      <!-- Pre-Wedding Events -->
-      <section class="section-padding" style="background-color:rgb(197,164,109)">
-        <div class="max-w-3xl mx-auto">
-          <div class="text-center mb-6">
-            <p class="font-body text-sm tracking-[0.3em] uppercase text-white/80" data-i18n="prewedding.label">Pre-Wedding Events</p>
-          </div>
-          <div class="text-center max-w-2xl mx-auto mb-6">
-            <h2 class="font-display text-4xl md:text-7xl mb-2 text-white" data-i18n="prewedding.title">Come Say Hello...</h2>
-            <p class="font-body text-sm leading-relaxed text-white/80" data-i18n="prewedding.desc">These are informal gatherings, so feel free to join us if you're in the area.</p>
-          </div>
-          <div class="flex flex-col gap-4 max-w-2xl mx-auto">
-            <div class="bg-white rounded-2xl p-6 md:p-8 shadow-lg text-center">
-              <img src="images/illustrations/welcome-drinks.webp" alt="" class="w-20 h-auto mx-auto mb-3 opacity-90" loading="lazy" decoding="async" />
-              <h3 class="font-display text-3xl md:text-4xl mb-3" style="color:rgb(130,95,48)" data-i18n="prewedding.drinks">Welcome Drinks</h3>
-              <div class="w-10 h-px mx-auto mb-3" style="background-color:rgba(130,95,48,0.2)"></div>
-              <p class="font-body text-sm font-medium tracking-wide mb-1" style="color:rgba(130,95,48,0.85)" data-i18n="prewedding.drinks.date">Friday, September 11th, 2026</p>
-              <p class="font-body text-sm tracking-wide mb-1" style="color:rgba(130,95,48,0.7)">8:00 PM</p>
-              <p class="font-body text-sm italic" style="color:rgba(130,95,48,0.6)">Bodega Garc&iacute;a Hidalgo, Ronda</p>
-            </div>
-            <div class="bg-white rounded-2xl p-6 md:p-8 shadow-lg text-center">
-              <img src="images/illustrations/teacup.webp" alt="" class="w-20 h-auto mx-auto mb-3 opacity-90" loading="lazy" decoding="async" />
-              <h3 class="font-display text-3xl md:text-4xl mb-3" style="color:rgb(130,95,48)" data-i18n="prewedding.brunch">Farewell Brunch</h3>
-              <div class="w-10 h-px mx-auto mb-3" style="background-color:rgba(130,95,48,0.2)"></div>
-              <p class="font-body text-sm font-medium tracking-wide mb-1" style="color:rgba(130,95,48,0.85)" data-i18n="prewedding.brunch.date">Sunday, September 13th, 2026</p>
-              <p class="font-body text-sm tracking-wide mb-1" style="color:rgba(130,95,48,0.7)">12:00 PM</p>
-              <p class="font-body text-sm italic" style="color:rgba(130,95,48,0.6)">Parador de Ronda (terrace)</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Cupid Divider -->
-      <div class="bg-ivory flex flex-col items-center py-16 md:py-20">
-        <img src="images/illustrations/cupid.webp" alt="" class="w-24 md:w-32 h-auto opacity-80" loading="lazy" decoding="async" />
-      </div>
-
-      <!-- Location & Transportation -->
-      <section class="section-padding bg-ivory">
+      <!-- Transportation Section -->
+      <section class="section-padding relative overflow-hidden"
+        style="background-image:url('images/textured-paper-bg.webp');background-size:cover;background-position:center">
         <div class="max-w-3xl mx-auto">
           <div class="text-center mb-10">
-            <h2 class="font-display text-4xl md:text-7xl text-sage-dark mb-2" data-i18n="location.title">Location &amp; Transportation</h2>
+            <h2 class="font-display text-4xl md:text-7xl text-sage-dark mb-2" data-i18n="transport.title">Getting There</h2>
+            <p class="text-gold font-body tracking-wide font-medium" data-i18n="transport.subtitle">What you need to know</p>
           </div>
-          <div class="bg-white/80 backdrop-blur-sm border border-gold/20 rounded-2xl p-8 md:p-10 shadow-lg text-center space-y-6">
-            <div class="flex flex-col items-center gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-gold">
-                <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
-                <circle cx="12" cy="10" r="3"></circle>
-              </svg>
-              <p class="text-sage-dark font-body text-base leading-relaxed font-medium" data-i18n="location.address">Almasa Hotel, Dr Abd El-Aziz El-Shennawy, Gameat Al Azhar, Cairo.</p>
-            </div>
-            <a href="https://maps.app.goo.gl/JX4ToKPT3hERWnAw6" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 font-body text-xs tracking-[0.15em] uppercase text-gold hover:text-sage-dark transition-colors border-b border-gold/40 hover:border-sage-dark pb-0.5" data-i18n="location.gmaps">Google Maps</a>
-            <div class="w-12 h-px bg-gold/20 mx-auto"></div>
-            <div class="flex flex-col items-center gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-gold">
-                <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"></path>
-                <circle cx="7" cy="17" r="2"></circle>
-                <path d="M9 17h6"></path>
-                <circle cx="17" cy="17" r="2"></circle>
-              </svg>
-              <p class="text-sage-dark/70 font-body text-sm leading-relaxed whitespace-pre-line" data-i18n="location.driving">From M&aacute;laga: ~1h 30min via A-357 and A-367
-From Seville: ~2h via A-376
-From Marbella: ~1h via A-397</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Matchbox Divider -->
-      <div class="bg-ivory flex justify-center py-16 md:py-20">
-        <img src="images/illustrations/matchbox.webp" alt="" class="w-24 md:w-32 h-auto opacity-80" loading="lazy" decoding="async" />
-      </div>
-
-      <!-- Accommodation Section -->
-      <section class="section-padding relative overflow-hidden">
-        <div class="absolute inset-0">
-          <img src="images/textured-paper-bg.webp" alt="" class="w-full h-full object-cover" loading="lazy" />
-        </div>
-        <div class="max-w-3xl mx-auto relative z-10">
-          <div class="text-center mb-8">
-            <h2 class="font-display text-4xl md:text-7xl text-sage-dark leading-tight" data-i18n="accommodation.title">Accommodation</h2>
-            <p class="text-sage-dark/70 font-body tracking-wide mt-4" data-i18n="accommodation.subtitle">Almasa Hotel does not offer lodging. Here are some recommended options nearby.</p>
-          </div>
-          <div class="bg-white/80 backdrop-blur-sm border border-gold/20 rounded-2xl p-8 md:p-10 shadow-lg">
-            <div class="space-y-0">
-              <div class="text-center py-6 first:pt-0 last:pb-0">
-                <h3 class="font-body text-sm md:text-base uppercase tracking-[0.2em] text-sage-dark">Parador de Ronda</h3>
-                <p class="text-sage-dark/60 font-body text-sm italic mt-1">Ronda</p>
-                <p class="text-sage-dark/50 font-body text-xs tracking-wide mt-1.5" data-i18n="accommodation.dist1">2 km de la finca</p>
-                <p class="text-sage-dark/50 font-body text-xs tracking-wide mt-0.5">
-                  <a href="tel:+34952877500" class="underline hover:text-gold transition-colors">+34 952 877 500</a> &middot;
-                  <a href="mailto:ronda@parador.es" class="underline hover:text-gold transition-colors">ronda@parador.es</a>
-                </p>
-                <a href="https://www.parador.es/es/paradores/parador-de-ronda" target="_blank" rel="noopener noreferrer" class="inline-block text-gold font-body text-xs tracking-wide mt-1.5 underline hover:text-sage-dark transition-colors" data-i18n="accommodation.visit">Visit Website</a>
-              </div>
-              <div class="text-center py-6 first:pt-0 last:pb-0">
-                <div class="w-12 h-px bg-gold/25 mx-auto mb-6"></div>
-                <h3 class="font-body text-sm md:text-base uppercase tracking-[0.2em] text-sage-dark">Hotel Catalonia Ronda</h3>
-                <p class="text-sage-dark/60 font-body text-sm italic mt-1">Ronda</p>
-                <p class="text-sage-dark/50 font-body text-xs tracking-wide mt-1.5" data-i18n="accommodation.dist2">1.5 km</p>
-                <p class="text-sage-dark/50 font-body text-xs tracking-wide mt-0.5">
-                  <a href="tel:+34952872315" class="underline hover:text-gold transition-colors">+34 952 872 315</a> &middot;
-                  <a href="mailto:ronda@hoteles-catalonia.es" class="underline hover:text-gold transition-colors">ronda@hoteles-catalonia.es</a>
-                </p>
-                <a href="https://www.cataloniahotels.com/es/hotel/catalonia-ronda" target="_blank" rel="noopener noreferrer" class="inline-block text-gold font-body text-xs tracking-wide mt-1.5 underline hover:text-sage-dark transition-colors" data-i18n="accommodation.visit">Visit Website</a>
-                <p class="text-gold font-body text-xs tracking-wide mt-1 font-medium">Promo Code: BODA2026</p>
-              </div>
-              <div class="text-center py-6 first:pt-0 last:pb-0">
-                <div class="w-12 h-px bg-gold/25 mx-auto mb-6"></div>
-                <h3 class="font-body text-sm md:text-base uppercase tracking-[0.2em] text-sage-dark">Hotel Montelirio</h3>
-                <p class="text-sage-dark/60 font-body text-sm italic mt-1">Ronda</p>
-                <p class="text-sage-dark/50 font-body text-xs tracking-wide mt-1.5" data-i18n="accommodation.boutique">Boutique | Sobre el Tajo</p>
-                <p class="text-sage-dark/50 font-body text-xs tracking-wide mt-0.5">
-                  <a href="tel:+34952873855" class="underline hover:text-gold transition-colors">+34 952 873 855</a> &middot;
-                  <a href="mailto:reservas@hotelmontelirio.com" class="underline hover:text-gold transition-colors">reservas@hotelmontelirio.com</a>
-                </p>
-                <a href="https://www.hotelmontelirio.com/" target="_blank" rel="noopener noreferrer" class="inline-block text-gold font-body text-xs tracking-wide mt-1.5 underline hover:text-sage-dark transition-colors" data-i18n="accommodation.visit">Visit Website</a>
-              </div>
-            </div>
-          </div>
-          <p class="text-center text-sage-dark/60 mt-8 font-body text-sm italic" data-i18n="accommodation.note">For hotels without direct agreements, please mention "Wedding at Almasa Hotel" to access preferential rates.</p>
-        </div>
-      </section>
-
-      <!-- Locket Divider -->
-      <div class="bg-ivory flex justify-center py-16 md:py-20">
-        <img src="images/illustrations/locket.webp" alt="" class="w-24 md:w-32 h-auto opacity-80" loading="lazy" decoding="async" />
-      </div>
-
-      <!-- Second Gallery Marquee -->
-      <div class="bg-ivory w-full overflow-hidden pb-16 md:pb-20">
-        <div class="flex animate-marquee gap-3 md:gap-4" style="width:max-content;animation-play-state:running">
-          <div class="flex-shrink-0 overflow-hidden" style="height:340px;width:240px">
-            <img src="images/gallery/gallery-6.webp" alt="Wedding photo" class="h-full w-full object-cover" loading="lazy" draggable="false" style="object-position:center 40%" />
-          </div>
-          <div class="flex-shrink-0 overflow-hidden" style="height:340px;width:240px">
-            <img src="images/gallery/gallery-7.webp" alt="Wedding photo" class="h-full w-full object-cover" loading="lazy" draggable="false" style="object-position:center 35%" />
-          </div>
-          <div class="flex-shrink-0 overflow-hidden" style="height:340px;width:240px">
-            <img src="images/gallery/gallery-8.webp" alt="Wedding photo" class="h-full w-full object-cover" loading="lazy" draggable="false" style="object-position:right 50%" />
-          </div>
-          <div class="flex-shrink-0 overflow-hidden" style="height:340px;width:240px">
-            <img src="images/gallery/gallery-9.webp" alt="Wedding photo" class="h-full w-full object-cover" loading="lazy" draggable="false" style="object-position:center 30%" />
-          </div>
-          <div class="flex-shrink-0 overflow-hidden" style="height:340px;width:240px">
-            <img src="images/gallery/gallery-10.webp" alt="Wedding photo" class="h-full w-full object-cover" loading="lazy" draggable="false" style="object-position:right 40%" />
-          </div>
-          <div class="flex-shrink-0 overflow-hidden" style="height:340px;width:240px">
-            <img src="images/gallery/gallery-6.webp" alt="Wedding photo" class="h-full w-full object-cover" loading="lazy" draggable="false" style="object-position:center 40%" />
-          </div>
-          <div class="flex-shrink-0 overflow-hidden" style="height:340px;width:240px">
-            <img src="images/gallery/gallery-7.webp" alt="Wedding photo" class="h-full w-full object-cover" loading="lazy" draggable="false" style="object-position:center 35%" />
-          </div>
-          <div class="flex-shrink-0 overflow-hidden" style="height:340px;width:240px">
-            <img src="images/gallery/gallery-8.webp" alt="Wedding photo" class="h-full w-full object-cover" loading="lazy" draggable="false" style="object-position:right 50%" />
-          </div>
-          <div class="flex-shrink-0 overflow-hidden" style="height:340px;width:240px">
-            <img src="images/gallery/gallery-9.webp" alt="Wedding photo" class="h-full w-full object-cover" loading="lazy" draggable="false" style="object-position:center 30%" />
-          </div>
-          <div class="flex-shrink-0 overflow-hidden" style="height:340px;width:240px">
-            <img src="images/gallery/gallery-10.webp" alt="Wedding photo" class="h-full w-full object-cover" loading="lazy" draggable="false" style="object-position:right 40%" />
-          </div>
-        </div>
-      </div>
-
-      <!-- Gifts Section -->
-      <section class="relative overflow-hidden">
-        <img src="images/hotel-photo.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover object-bottom" />
-        <div class="relative z-10 px-6 md:px-16 py-10 md:py-16">
-          <div class="max-w-3xl mx-auto text-center">
-            <div class="bg-white rounded-lg border border-sage/20 p-10 md:p-14 shadow-md max-w-2xl mx-auto">
-              <h2 class="font-display text-4xl md:text-7xl text-sage-dark mb-6" data-i18n="gifts.title">Gifts</h2>
-              <p class="text-sage-dark/80 font-body text-lg leading-relaxed italic mb-8" data-i18n="gifts.desc">Your presence is our greatest gift. If you wish to give us something, please find our bank account information below:</p>
-              <div class="bg-ivory rounded-lg p-6 mb-4 text-left">
-                <h3 class="font-body text-sm uppercase tracking-[0.15em] text-sage-dark font-medium mb-3">CaixaBank &ndash; Ibrahim Elsawy</h3>
-                <p class="text-sage-dark/70 font-body text-sm whitespace-pre-line leading-relaxed">IBAN: ES00 0000 0000 0000 0000 0000
-BIC/SWIFT: XXXXXXXXXX</p>
-              </div>
-              <div class="bg-ivory rounded-lg p-6 text-left">
-                <h3 class="font-body text-sm uppercase tracking-[0.15em] text-sage-dark font-medium mb-3">Banco Santander &ndash; Yara Yehia</h3>
-                <p class="text-sage-dark/70 font-body text-sm whitespace-pre-line leading-relaxed">IBAN: ES00 0000 0000 0000 0000 0000
-BIC/SWIFT: XXXXXXXXXX</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Swans Divider -->
-      <div class="bg-ivory flex justify-center py-10 md:py-14">
-        <img src="images/illustrations/swans.webp" alt="" class="w-32 md:w-40 h-auto opacity-80" loading="lazy" decoding="async" />
-      </div>
-
-      <!-- RSVP Section -->
-      <section id="rsvp" class="section-padding" style="background-color:rgb(197,164,109)">
-        <div class="max-w-xl mx-auto">
-          <div class="text-center mb-12">
-            <h2 class="font-display text-4xl md:text-7xl text-white mb-2" data-i18n="rsvp.title">RSVP</h2>
-            <p class="font-body tracking-wide font-medium" style="color:rgb(249,247,242)" data-i18n="rsvp.subtitle">Let us know if you can make it</p>
-          </div>
-          <div class="bg-white rounded-xl p-6 md:p-8 shadow-sm">
-            <!-- Thank You Message (hidden by default) -->
-            <div id="rsvpSuccess" class="hidden text-center py-10">
-              <div class="text-5xl mb-4">💌</div>
-              <h3 class="font-display text-3xl md:text-4xl text-sage-dark mb-3" data-i18n="rsvp.thanks">Thank You!</h3>
-              <p class="text-sage-dark/80 font-body text-base leading-relaxed italic" data-i18n="rsvp.thanks.msg">We're so excited to celebrate with you! Your response has been received — see you at the wedding! 🎉</p>
-            </div>
-
-            <form class="space-y-8" id="rsvpForm" action="https://formsubmit.co/d93a202800dbbb8d837ff4fe9df5e04b" method="POST">
-              <!-- FormSubmit config -->
-              <input type="hidden" name="_subject" value="New RSVP Submission 💍" />
-              <input type="hidden" name="_template" value="table" />
-              <input type="hidden" name="_captcha" value="false" />
-              <input type="hidden" name="_guests" id="hiddenGuests" value="1" />
-
-              <!-- Honeypot (FormSubmit uses this automatically) -->
-              <input type="text" name="_honey" style="display:none" />
-
-              <!-- Attendance -->
-              <div>
-                <label class="text-sage-dark font-medium text-base" data-i18n="rsvp.attending">Will you be attending? *</label>
-                <div role="radiogroup" class="flex flex-col gap-3 mt-3" tabindex="0" style="outline:none">
-                  <div class="flex items-start space-x-2">
-                    <input type="radio" name="attending" value="yes" id="yes" checked class="mt-1 accent-[#c5a46d]" />
-                    <label class="text-sm font-medium cursor-pointer text-sage-dark leading-tight" for="yes" data-i18n="rsvp.yes">Yes, I'll be there</label>
-                  </div>
-                  <div class="flex items-start space-x-2">
-                    <input type="radio" name="attending" value="no" id="no" class="mt-1 accent-[#c5a46d]" />
-                    <label class="text-sm font-medium cursor-pointer text-sage-dark leading-tight" for="no" data-i18n="rsvp.no">Unfortunately, I can't make it</label>
-                  </div>
+          <div class="bg-white/90 backdrop-blur-sm rounded-2xl border border-sage/30 shadow-lg overflow-hidden">
+            <!-- Golf Cart Image -->
+            <img src="images/golf-cart-6.jpg" alt="Golf Cart"
+              class="w-full h-52 md:h-64 object-cover" loading="lazy" decoding="async" />
+            <!-- Cards below image -->
+            <div class="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-sage/20">
+              <!-- Transportation Card -->
+              <div class="p-8 text-center">
+                <div class="w-12 h-12 mx-auto mb-4 rounded-full bg-gold/10 flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-gold">
+                    <path d="M8 6v6"></path><path d="M15 6v6"></path>
+                    <path d="M2 12h19.6"></path>
+                    <path d="M18 18h3s.5-1.7.8-2.8c.1-.4.2-.8.2-1.2 0-.4-.1-.8-.2-1.2l-1.4-5C20.1 6.8 19.1 6 18 6H4a2 2 0 0 0-2 2v10h3"></path>
+                    <circle cx="7" cy="18" r="2"></circle><circle cx="15" cy="18" r="2"></circle>
+                  </svg>
                 </div>
+                <h3 class="font-display text-3xl text-sage-dark mb-3" data-i18n="dresscode.women">Transportation</h3>
+                <p class="text-sage-dark/70 font-body text-base italic leading-relaxed"
+                  data-i18n="dresscode.women.desc">You must ride golf cart to reach the lounge garden,
+                  please contact this number if you couldn't find one</p>
+                <a href="tel:+201273006656"
+                  class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-gold/15 text-gold font-body font-semibold text-sm not-italic hover:bg-gold/25 transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                  01273006656
+                </a>
               </div>
+              <!-- Parking Card -->
+              <div class="p-8 text-center">
+                <div class="w-12 h-12 mx-auto mb-4 rounded-full bg-gold/10 flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-gold">
+                    <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+                    <path d="M9 17V7h4a3 3 0 0 1 0 6H9"></path>
+                  </svg>
+                </div>
+                <h3 class="font-display text-3xl text-sage-dark mb-3" data-i18n="dresscode.men">Parking</h3>
+                <p class="text-sage-dark/70 font-body text-base italic leading-relaxed"
+                  data-i18n="dresscode.men.desc">You can park your car in the street outside Almasa hotel with no
+                  parking fees or park inside the hotel for small fees per hour</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-              <!-- Guest Count -->
-              <div class="space-y-4">
+  <!-- Cupid Divider -->
+  <div class="bg-ivory flex flex-col items-center py-14 md:py-20">
+    <img src="images/illustrations/cupid.webp" alt="" class="w-24 md:w-32 h-auto opacity-80" loading="lazy"
+      decoding="async" />
+  </div>
+
+  <!-- Gifts Section -->
+  <section class="section-padding" style="background-color:rgb(197,164,109)">
+    <div class="relative z-10 px-6 md:px-16 py-10 md:py-16">
+      <div class="max-w-3xl mx-auto text-center">
+        <div class="bg-white rounded-lg border border-sage/20 p-10 md:p-14 shadow-md max-w-2xl mx-auto">
+          <h2 class="font-display text-4xl md:text-6xl text-sage-dark mb-6" data-i18n="gifts.title">Sweet
+            dreams, little ones</h2>
+          <!-- <p class="text-sage-dark/80 font-body text-lg leading-relaxed italic mb-8" data-i18n="gifts.desc"></p> -->
+          <img src="images/baby.png" alt="Golf Cart" class="w-full max-w-lg h-auto mx-auto mb-2" loading="lazy"
+            decoding="async" />
+          <!-- <div class="bg-ivory rounded-lg p-6 mb-4 text-left">
+            <h3 class="font-body text-sm uppercase tracking-[0.15em] text-sage-dark font-medium mb-3">CaixaBank
+              &ndash; Ibrahim Elsawy</h3>
+            <p class="text-sage-dark/70 font-body text-sm whitespace-pre-line leading-relaxed">IBAN: ES00 0000 0000
+              0000 0000 0000
+              BIC/SWIFT: XXXXXXXXXX</p>
+          </div>
+          <div class="bg-ivory rounded-lg p-6 text-left">
+            <h3 class="font-body text-sm uppercase tracking-[0.15em] text-sage-dark font-medium mb-3">Banco
+              Santander &ndash; Yara Yehia</h3>
+            <p class="text-sage-dark/70 font-body text-sm whitespace-pre-line leading-relaxed">IBAN: ES00 0000 0000
+              0000 0000 0000
+              BIC/SWIFT: XXXXXXXXXX</p> -->
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- Champagne Divider -->
+  <div class="bg-ivory flex flex-col items-center py-16 md:py-16">
+    <img src="images/illustrations/champagne-tower.webp" alt="" class="w-32 md:w-40 h-auto opacity-80" loading="lazy"
+      decoding="async" />
+  </div>
+
+  <!-- Programme Section -->
+  <section class="section-padding relative overflow-hidden"
+    style="background-image:url('images/textured-paper-bg.webp');background-size:cover;background-position:center">
+    <div class="max-w-2xl mx-auto programme-section">
+      <div class="text-center mb-8">
+        <h2 class="font-display text-4xl md:text-7xl text-sage-dark mb-2" data-i18n="programme.title">Day Programme
+        </h2>
+        <p class="text-gold font-body tracking-wide font-medium" data-i18n="wedding.date">17 October 2026</p>
+      </div>
+      <div class="relative">
+        <div class="absolute left-1/2 top-3 bottom-3 w-px bg-sage-dark/40 -translate-x-1/2"></div>
+        <div class="space-y-0">
+          <div class="relative flex items-center py-3">
+            <div class="absolute left-1/2 -translate-x-1/2 w-4 h-px bg-sage-dark/40"></div>
+            <div class="w-1/2 pr-8 text-right"></div>
+            <div class="w-1/2 pl-8 text-left">
+              <p class="font-body font-bold text-sage-dark tracking-[0.15em] text-sm md:text-base">8:00 PM</p>
+              <p class="font-body text-sage-dark/80 tracking-[0.15em] uppercase text-xs md:text-sm mt-0.5"
+                data-i18n="programme.arrival">Arrival</p>
+            </div>
+          </div>
+          <div class="relative flex items-center py-3">
+            <div class="absolute left-1/2 -translate-x-1/2 w-4 h-px bg-sage-dark/40"></div>
+            <div class="w-1/2 pr-8 text-right">
+              <p class="font-body font-bold text-sage-dark tracking-[0.15em] text-sm md:text-base">8:30 PM</p>
+              <p class="font-body text-sage-dark/80 tracking-[0.15em] uppercase text-xs md:text-sm mt-0.5"
+                data-i18n="programme.katb">Katb Ketab Ceremony</p>
+            </div>
+            <div class="w-1/2 pl-8 text-left"></div>
+          </div>
+          <div class="relative flex items-center py-3">
+            <div class="absolute left-1/2 -translate-x-1/2 w-4 h-px bg-sage-dark/40"></div>
+            <div class="w-1/2 pr-8 text-right"></div>
+            <div class="w-1/2 pl-8 text-left">
+              <p class="font-body font-bold text-sage-dark tracking-[0.15em] text-sm md:text-base">9:45 PM</p>
+              <p class="font-body text-sage-dark/80 tracking-[0.15em] uppercase text-xs md:text-sm mt-0.5"
+                data-i18n="programme.cake">Cutting the Cake</p>
+            </div>
+          </div>
+          <div class="relative flex items-center py-3">
+            <div class="absolute left-1/2 -translate-x-1/2 w-4 h-px bg-sage-dark/40"></div>
+            <div class="w-1/2 pr-8 text-right">
+              <p class="font-body font-bold text-sage-dark tracking-[0.15em] text-sm md:text-base">10:00 PM</p>
+              <p class="font-body text-sage-dark/80 tracking-[0.15em] uppercase text-xs md:text-sm mt-0.5"
+                data-i18n="programme.dinner">Dinner</p>
+            </div>
+            <div class="w-1/2 pl-8 text-left"></div>
+          </div>
+          <div class="relative flex items-center py-3">
+            <div class="absolute left-1/2 -translate-x-1/2 w-4 h-px bg-sage-dark/40"></div>
+            <div class="w-1/2 pr-8 text-right"></div>
+            <div class="w-1/2 pl-8 text-left">
+              <p class="font-body font-bold text-sage-dark tracking-[0.15em] text-sm md:text-base">11:30 PM</p>
+              <p class="font-body text-sage-dark/80 tracking-[0.15em] uppercase text-xs md:text-sm mt-0.5"
+                data-i18n="programme.photos">Photos</p>
+            </div>
+          </div>
+          <div class="relative flex items-center py-3">
+            <div class="absolute left-1/2 -translate-x-1/2 w-4 h-px bg-sage-dark/40"></div>
+            <div class="w-1/2 pr-8 text-right">
+              <p class="font-body font-bold text-sage-dark tracking-[0.15em] text-sm md:text-base">12:00 AM</p>
+              <p class="font-body text-sage-dark/80 tracking-[0.15em] uppercase text-xs md:text-sm mt-0.5"
+                data-i18n="programme.finish">Finish</p>
+            </div>
+            <div class="w-1/2 pl-8 text-left"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Locket Divider -->
+  <div class="bg-ivory flex justify-center py-16 md:py-16">
+    <img src="images/illustrations/locket.webp" alt="" class="w-24 md:w-32 h-auto opacity-80" loading="lazy"
+      decoding="async" />
+  </div>
+
+  <!-- Second Gallery Marquee -->
+  <div class="bg-ivory w-full overflow-hidden pb-16 md:pb-20">
+    <div class="flex animate-marquee gap-3 md:gap-4" style="width:max-content;animation-play-state:running">
+      <div class="flex-shrink-0 overflow-hidden" style="height:340px;width:240px">
+        <img src="images/gallery/gallery-6.webp" alt="Wedding photo" class="h-full w-full object-cover" loading="lazy"
+          draggable="false" style="object-position:center 40%" />
+      </div>
+      <div class="flex-shrink-0 overflow-hidden" style="height:340px;width:240px">
+        <img src="images/gallery/gallery-7.webp" alt="Wedding photo" class="h-full w-full object-cover" loading="lazy"
+          draggable="false" style="object-position:center 35%" />
+      </div>
+      <div class="flex-shrink-0 overflow-hidden" style="height:340px;width:240px">
+        <img src="images/gallery/gallery-8.webp" alt="Wedding photo" class="h-full w-full object-cover" loading="lazy"
+          draggable="false" style="object-position:right 50%" />
+      </div>
+      <div class="flex-shrink-0 overflow-hidden" style="height:340px;width:240px">
+        <img src="images/gallery/gallery-9.webp" alt="Wedding photo" class="h-full w-full object-cover" loading="lazy"
+          draggable="false" style="object-position:center 30%" />
+      </div>
+      <div class="flex-shrink-0 overflow-hidden" style="height:340px;width:240px">
+        <img src="images/gallery/gallery-10.webp" alt="Wedding photo" class="h-full w-full object-cover" loading="lazy"
+          draggable="false" style="object-position:right 40%" />
+      </div>
+      <div class="flex-shrink-0 overflow-hidden" style="height:340px;width:240px">
+        <img src="images/gallery/gallery-6.webp" alt="Wedding photo" class="h-full w-full object-cover" loading="lazy"
+          draggable="false" style="object-position:center 40%" />
+      </div>
+      <div class="flex-shrink-0 overflow-hidden" style="height:340px;width:240px">
+        <img src="images/gallery/gallery-7.webp" alt="Wedding photo" class="h-full w-full object-cover" loading="lazy"
+          draggable="false" style="object-position:center 35%" />
+      </div>
+      <div class="flex-shrink-0 overflow-hidden" style="height:340px;width:240px">
+        <img src="images/gallery/gallery-8.webp" alt="Wedding photo" class="h-full w-full object-cover" loading="lazy"
+          draggable="false" style="object-position:right 50%" />
+      </div>
+      <div class="flex-shrink-0 overflow-hidden" style="height:340px;width:240px">
+        <img src="images/gallery/gallery-9.webp" alt="Wedding photo" class="h-full w-full object-cover" loading="lazy"
+          draggable="false" style="object-position:center 30%" />
+      </div>
+      <div class="flex-shrink-0 overflow-hidden" style="height:340px;width:240px">
+        <img src="images/gallery/gallery-10.webp" alt="Wedding photo" class="h-full w-full object-cover" loading="lazy"
+          draggable="false" style="object-position:right 40%" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Swans Divider -->
+  <div class="bg-ivory flex justify-center py-10 md:py-14">
+    <img src="images/illustrations/swans.webp" alt="" class="w-32 md:w-40 h-auto opacity-80" loading="lazy"
+      decoding="async" />
+  </div>
+
+  <!-- RSVP Section -->
+  <section id="rsvp" class="section-padding" style="background-color:rgb(197,164,109)">
+    <div class="max-w-xl mx-auto">
+      <div class="text-center mb-8">
+        <h2 class="font-display text-4xl md:text-7xl text-white mb-2" data-i18n="rsvp.title">Guest List</h2>
+        <p class="font-body tracking-wide font-medium" style="color:rgb(249,247,242)" data-i18n="rsvp.subtitle">Let
+          us know if you can make it</p>
+      </div>
+      <div class="bg-white rounded-xl p-6 md:p-8 shadow-sm">
+        <!-- Thank You Message (hidden by default) -->
+        <div id="rsvpSuccess" class="hidden text-center py-10">
+          <div class="text-6xl mb-4">💌</div>
+          <h3 class="font-display text-3xl md:text-4xl text-sage-dark mb-3" data-i18n="rsvp.thanks">Thank You!</h3>
+          <p class="text-sage-dark/80 font-body text-base leading-relaxed italic" data-i18n="rsvp.thanks.msg">We're
+            so excited to celebrate with you! Your response has been received — see you at the wedding!</p>
+        </div>
+
+        <form class="space-y-8" id="rsvpForm" action="https://formsubmit.co/d93a202800dbbb8d837ff4fe9df5e04b"
+          method="POST">
+          <!-- FormSubmit config -->
+          <input type="hidden" name="_subject" value="New Form Submission 💍" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_guests" id="hiddenGuests" value="1" />
+
+          <!-- Honeypot (FormSubmit uses this automatically) -->
+          <input type="text" name="_honey" style="display:none" />
+
+          <!-- Attendance -->
+          <div>
+            <label class="text-sage-dark font-medium text-base" data-i18n="rsvp.attending">Will you be attending?
+              *</label>
+            <div role="radiogroup" class="flex flex-col gap-3 mt-3" tabindex="0" style="outline:none">
+              <div class="flex items-start space-x-2">
+                <input type="radio" name="attending" value="yes" id="yes" checked class="mt-1 accent-[#c5a46d]" />
+                <label class="text-sm font-medium cursor-pointer text-sage-dark leading-tight" for="yes"
+                  data-i18n="rsvp.yes">Yes, I'll be there</label>
+              </div>
+              <div class="flex items-start space-x-2">
+                <input type="radio" name="attending" value="no" id="no" class="mt-1 accent-[#c5a46d]" />
+                <label class="text-sm font-medium cursor-pointer text-sage-dark leading-tight" for="no"
+                  data-i18n="rsvp.no">Unfortunately, I can't make it</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Guest Count -->
+          <!-- <div class="space-y-4">
                 <div class="flex items-center gap-2">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#c5a46d]">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="w-4 h-4 text-[#c5a46d]">
                     <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
                     <circle cx="9" cy="7" r="4"></circle>
                     <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
@@ -621,83 +684,117 @@ BIC/SWIFT: XXXXXXXXXX</p>
                   <label class="text-base text-sage-dark font-medium" data-i18n="rsvp.guests">How many guests?</label>
                 </div>
                 <div class="flex items-center gap-2">
-                  <button class="inline-flex items-center justify-center rounded-md text-sm font-medium border-2 bg-transparent h-10 w-10 border-[#c5a46d]/30 text-sage-dark hover:bg-[#c5a46d]/10" type="button" id="guestMinus" disabled>-</button>
+                  <button
+                    class="inline-flex items-center justify-center rounded-md text-sm font-medium border-2 bg-transparent h-10 w-10 border-[#c5a46d]/30 text-sage-dark hover:bg-[#c5a46d]/10"
+                    type="button" id="guestMinus" disabled>-</button>
                   <span id="guestCount" class="w-10 text-center text-lg font-medium text-sage-dark">1</span>
-                  <button class="inline-flex items-center justify-center rounded-md text-sm font-medium border-2 bg-transparent h-10 w-10 border-[#c5a46d]/30 text-sage-dark hover:bg-[#c5a46d]/10" type="button" id="guestPlus">+</button>
+                  <button
+                    class="inline-flex items-center justify-center rounded-md text-sm font-medium border-2 bg-transparent h-10 w-10 border-[#c5a46d]/30 text-sage-dark hover:bg-[#c5a46d]/10"
+                    type="button" id="guestPlus">+</button>
                 </div>
-              </div>
+              </div> -->
 
-              <!-- Person Details -->
-              <div class="space-y-6">
+          <!-- Person Details -->
+          <!-- <div class="space-y-6">
                 <div class="p-4 bg-[#c5a46d]/5 rounded-lg space-y-4">
-                  <label class="text-sm text-sage-dark font-medium" data-i18n="rsvp.person1">Person 1 (Main contact)</label>
-                  <input class="flex h-10 w-full rounded-md border px-3 py-2 text-sm bg-ivory border-[#c5a46d]/30 text-sage-dark placeholder:text-sage-dark/50 focus:border-[#c5a46d] focus:outline-none" required placeholder="Full name" data-i18n-placeholder="rsvp.name.placeholder" name="name" />
-                  <input type="email" class="flex h-10 w-full rounded-md border px-3 py-2 text-sm bg-ivory border-[#c5a46d]/30 text-sage-dark placeholder:text-sage-dark/50 focus:border-[#c5a46d] focus:outline-none" required placeholder="Email address" data-i18n-placeholder="rsvp.email.placeholder" name="email" />
+                  <label class="text-sm text-sage-dark font-medium" data-i18n="rsvp.person1">Person (Main
+                    contact)</label>
+
+                  <input type="email"
+                    class="flex h-10 w-full rounded-md border px-3 py-2 text-sm bg-ivory border-[#c5a46d]/30 text-sage-dark placeholder:text-sage-dark/50 focus:border-[#c5a46d] focus:outline-none"
+                    required placeholder="Email address" data-i18n-placeholder="rsvp.email.placeholder" name="email" />
                   <div class="space-y-2">
-                    <label class="font-medium text-sm text-sage-dark/80" for="dietary-0" data-i18n="rsvp.dietary.label">Dietary requirements</label>
-                    <input class="flex h-10 w-full rounded-md border px-3 py-2 text-sm bg-ivory border-[#c5a46d]/30 text-sage-dark placeholder:text-sage-dark/50 focus:border-[#c5a46d] focus:outline-none" id="dietary-0" placeholder="e.g. vegetarian, allergies, etc." data-i18n-placeholder="rsvp.dietary.placeholder" name="dietary" />
+                    <label class="font-medium text-sm text-sage-dark/80" for="dietary-0"
+                      data-i18n="rsvp.dietary.label">Dietary requirements</label>
+                    <input
+                      class="flex h-10 w-full rounded-md border px-3 py-2 text-sm bg-ivory border-[#c5a46d]/30 text-sage-dark placeholder:text-sage-dark/50 focus:border-[#c5a46d] focus:outline-none"
+                      id="dietary-0" placeholder="e.g. vegetarian, allergies, etc."
+                      data-i18n-placeholder="rsvp.dietary.placeholder" name="dietary" />
                   </div>
                 </div>
-              </div>
+              </div> -->
 
-              <!-- Children -->
-              <div class="space-y-4">
-                <label class="text-sage-dark font-medium text-base" data-i18n="rsvp.children">Will any children be attending?</label>
+          <!-- Children -->
+          <!-- <div class="space-y-4">
+                <label class="text-sage-dark font-medium text-base" data-i18n="rsvp.children">Will any children be
+                  attending?</label>
                 <div role="radiogroup" class="flex flex-col gap-3" tabindex="0" style="outline:none">
                   <div class="flex items-center space-x-2">
                     <input type="radio" name="children" value="yes" id="children-yes" class="accent-[#c5a46d]" />
-                    <label class="text-sm font-medium cursor-pointer text-sage-dark" for="children-yes" data-i18n="rsvp.children.yes">Yes</label>
+                    <label class="text-sm font-medium cursor-pointer text-sage-dark" for="children-yes"
+                      data-i18n="rsvp.children.yes">Yes</label>
                   </div>
                   <div class="flex items-center space-x-2">
                     <input type="radio" name="children" value="no" id="children-no" checked class="accent-[#c5a46d]" />
-                    <label class="text-sm font-medium cursor-pointer text-sage-dark" for="children-no" data-i18n="rsvp.children.no">No</label>
+                    <label class="text-sm font-medium cursor-pointer text-sage-dark" for="children-no"
+                      data-i18n="rsvp.children.no">No</label>
                   </div>
                 </div>
-              </div>
+              </div> -->
 
-              <!-- Message -->
-              <div>
-                <label class="text-sm text-sage-dark font-medium" for="message" data-i18n="rsvp.message.label">Message for the couple</label>
-                <textarea class="flex min-h-[80px] w-full rounded-md border px-3 py-2 text-sm mt-2 bg-ivory border-[#c5a46d]/30 text-sage-dark placeholder:text-sage-dark/50 focus:border-[#c5a46d] focus:outline-none" id="message" name="message" placeholder="Is there anything you'd like to tell us?" data-i18n-placeholder="rsvp.message.placeholder" rows="3"></textarea>
-              </div>
-
-              <!-- Submit -->
-              <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring h-10 px-4 py-2 w-full gap-2 text-white font-medium" type="submit" id="rsvpSubmitBtn" style="background-color:rgb(197,164,109)">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
-                  <path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path>
-                  <path d="m21.854 2.147-10.94 10.939"></path>
-                </svg>
-                <span data-i18n="rsvp.submit">Send RSVP</span>
-              </button>
-            </form>
+          <!-- Message -->
+          <div>
+            <label class="text-sm text-sage-dark font-medium" for="message" data-i18n="rsvp.message.label">Message
+              for the couple</label>
+            <input
+              class="flex h-10 w-full rounded-md border px-3 py-2 mt-2 text-sm bg-ivory border-[#c5a46d]/30 text-sage-dark placeholder:text-sage-dark/50 focus:border-[#c5a46d] focus:outline-none"
+              required placeholder="Name" data-i18n-placeholder="rsvp.name.placeholder" name="name" />
+            <textarea
+              class="flex min-h-[80px] w-full rounded-md border px-3 py-2 text-sm mt-3 bg-ivory border-[#c5a46d]/30 text-sage-dark placeholder:text-sage-dark/50 focus:border-[#c5a46d] focus:outline-none"
+              id="message" name="message" placeholder="Is there anything you'd like to tell us?"
+              data-i18n-placeholder="rsvp.message.placeholder" rows="3"></textarea>
           </div>
-        </div>
-      </section>
 
-      <!-- Wedding Rings Divider -->
-      <div class="bg-ivory flex justify-center py-16 md:py-20">
-        <img src="images/illustrations/wedding-rings.webp" alt="" class="w-24 md:w-32 h-auto opacity-80" loading="lazy" decoding="async" />
+          <!-- Submit -->
+          <button
+            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring h-10 px-4 py-2 w-full gap-2 text-white font-medium"
+            type="submit" id="rsvpSubmitBtn" style="background-color:rgb(197,164,109)">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
+              <path
+                d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z">
+              </path>
+              <path d="m21.854 2.147-10.94 10.939"></path>
+            </svg>
+            <span data-i18n="rsvp.submit">Submit</span>
+          </button>
+        </form>
       </div>
+    </div>
+  </section>
 
-      <!-- Footer -->
-      <footer class="py-16 text-center relative overflow-hidden" style="background-image:url('images/textured-paper-bg.webp');background-size:cover;background-position:center">
-        <div class="relative z-10">
-          <p class="font-display font-en text-5xl md:text-6xl text-sage-dark mb-1 leading-tight">Ibrahim</p>
-          <p class="font-display font-en text-3xl md:text-4xl text-sage-dark italic mb-1">&amp;</p>
-          <p class="font-display font-en text-5xl md:text-6xl text-sage-dark mb-2 leading-tight">Yara</p>
-          <p class="text-lg text-gold font-body font-semibold tracking-wide" data-i18n="wedding.date">17 October 2026</p>
-        </div>
-      </footer>
-    </main>
+  <!-- Wedding Rings Divider -->
+  <div class="bg-ivory flex justify-center py-16 md:py-16">
+    <img src="images/illustrations/wedding-rings.webp" alt="" class="w-24 md:w-32 h-auto opacity-80" loading="lazy"
+      decoding="async" />
+  </div>
 
-    <!-- Mute Button -->
-    <button id="muteBtn" class="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-full bg-white/90 backdrop-blur-sm border border-gold/30 shadow-lg flex items-center justify-center text-sage-dark hover:bg-white hover:scale-110 transition-all duration-300" aria-label="Mute">
-      <svg id="muteBtnIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
-        <path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"></path>
-        <path d="M16 9a5 5 0 0 1 0 6"></path>
-        <path d="M19.364 18.364a9 9 0 0 0 0-12.728"></path>
-      </svg>
-    </button>
+  <!-- Footer -->
+  <footer class="py-16 text-center relative overflow-hidden"
+    style="background-image:url('images/textured-paper-bg.webp');background-size:cover;background-position:center">
+    <div class="relative z-10">
+      <p class="font-display font-en text-5xl md:text-6xl text-sage-dark mb-1 leading-tight">Ibrahim</p>
+      <p class="font-display font-en text-3xl md:text-4xl text-sage-dark italic mb-1">&amp;</p>
+      <p class="font-display font-en text-5xl md:text-6xl text-sage-dark mb-2 leading-tight">Yara</p>
+      <p class="text-lg text-gold font-body font-semibold tracking-wide" data-i18n="wedding.date">17 October 2026 - 8:00 PM
+      </p>
+    </div>
+  </footer>
+  </main>
+
+  <!-- Mute Button -->
+  <button id="muteBtn"
+    class="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-full bg-white/90 backdrop-blur-sm border border-gold/30 shadow-lg flex items-center justify-center text-sage-dark hover:bg-white hover:scale-110 transition-all duration-300"
+    aria-label="Mute">
+    <svg id="muteBtnIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+      <path
+        d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z">
+      </path>
+      <path d="M16 9a5 5 0 0 1 0 6"></path>
+      <path d="M19.364 18.364a9 9 0 0 0 0-12.728"></path>
+    </svg>
+  </button>
   </div>
 
   <!-- Background Music -->
@@ -709,7 +806,7 @@ BIC/SWIFT: XXXXXXXXXX</p>
   <script>
     // Audio playback on first click
     document.addEventListener("click", function () {
-      document.getElementById("bgMusic").play().catch(function () {});
+      document.getElementById("bgMusic").play().catch(function () { });
     }, { once: true });
 
     // Mute toggle
@@ -773,25 +870,6 @@ BIC/SWIFT: XXXXXXXXXX</p>
     })();
   </script>
 
-  <script>
-    // Guest counter
-    (function () {
-      var count = 1;
-      var el = document.getElementById("guestCount");
-      var minus = document.getElementById("guestMinus");
-      var plus = document.getElementById("guestPlus");
-      var hidden = document.getElementById("hiddenGuests");
-
-      minus.addEventListener("click", function () {
-        if (count > 1) { count--; el.textContent = count; hidden.value = count; }
-        minus.disabled = count <= 1;
-      });
-      plus.addEventListener("click", function () {
-        if (count < 10) { count++; el.textContent = count; hidden.value = count; }
-        minus.disabled = count <= 1;
-      });
-    })();
-  </script>
 
   <script>
     // RSVP form AJAX submission
@@ -863,7 +941,7 @@ BIC/SWIFT: XXXXXXXXXX</p>
         'dresscode.men.desc': 'بدلة داكنة وربطة عنق',
         'prewedding.label': 'فعاليات ما قبل الزفاف',
         'prewedding.title': 'تعال قل مرحباً...',
-        'prewedding.desc': 'هذه تجمعات غير رسمية، فلا تتردد في الانضمام إلينا إذا كنت في المنطقة.',
+        'prewedding.desc': ' هذه تجمعات غير رسمية، فلا تتردد في الانضمام إلينا إذا كنت في المنطقة.',
         'prewedding.drinks': 'مشروبات الترحيب',
         'prewedding.drinks.date': 'الجمعة، ١١ سبتمبر ٢٠٢٦',
         'prewedding.brunch': 'برانش الوداع',
@@ -954,5 +1032,3 @@ BIC/SWIFT: XXXXXXXXXX</p>
 </body>
 
 </html>
-
-
