@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://wedding-ibrahim-yara.com/sitemap.xml
