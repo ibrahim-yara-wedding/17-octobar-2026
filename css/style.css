@@ -3830,11 +3830,11 @@ h6 {
 
 .beige-filter {
   filter:
-    brightness(1.02)
-    contrast(0.96)
-    saturate(0.88)
-    sepia(0.08)
-    hue-rotate(6deg);
+    brightness(1.08)
+    contrast(0.9)
+    saturate(0.57)
+    sepia(0.06)
+    hue-rotate(6deg)
 }
 
 .reveal {

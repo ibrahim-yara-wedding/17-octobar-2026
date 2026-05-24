@@ -287,7 +287,7 @@
               </div>
               <div class="w-full rounded-xl overflow-hidden mb-6" style="height:220px">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d110515.24138001153!2d31.2883702!3d30.0482944!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583e51103c0615%3A0xc2eb3aec54a78cbc!2sAl%20Masa%20Hotel%20Nasr%20City!5e0!3m2!1sen!2seg!4v1779378015373!5m2!1sen!2seg"
-                  width="100%" height="220" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Almasa Hotel location on Google Maps"></iframe>
+                  width="100%" height="220" style="border:0; filter: saturate(0.85) sepia(0.2) brightness(1.01);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Almasa Hotel location on Google Maps"></iframe>
               </div>
               <a href="https://maps.app.goo.gl/JX4ToKPT3hERWnAw6" target="_blank" rel="noopener noreferrer"
                 class="inline-flex items-center gap-2 font-body text-sm tracking-[0.15em] uppercase text-sage-dark/70 hover:text-gold transition-colors border-b border-gold/30 hover:border-gold pb-1">
@@ -680,8 +680,24 @@
         var nowMuted = !audio.muted;
         audio.muted = nowMuted;
         audio.volume = nowMuted ? 0 : 1;
+        if (!nowMuted && audio.paused) audio.play().catch(function () { });
         icon.innerHTML = nowMuted ? ICON_OFF : ICON_ON;
         btn.setAttribute("aria-label", nowMuted ? "Unmute" : "Mute");
+      });
+    })();
+
+    // Pause/resume music on tab visibility change (works on desktop tab switch & mobile background)
+    (function () {
+      var audio = document.getElementById("bgMusic");
+      var wasPlaying = false;
+
+      document.addEventListener("visibilitychange", function () {
+        if (document.hidden) {
+          wasPlaying = !audio.paused;
+          if (wasPlaying) audio.pause();
+        } else {
+          if (wasPlaying && !audio.muted) audio.play().catch(function () { });
+        }
       });
     })();
   </script>
