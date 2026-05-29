@@ -150,11 +150,6 @@
       if (v !== undefined) el.placeholder = v;
     });
 
-    var golfCartImg = document.getElementById("golf-cart-img");
-    if (golfCartImg) {
-      golfCartImg.src = isAR ? "images/golf-cart-ar.webp" : "images/golf-cart-en.webp";
-    }
-
     var btnEn = document.getElementById("btn-en");
     var btnAr = document.getElementById("btn-ar");
     if (btnEn && btnAr) {

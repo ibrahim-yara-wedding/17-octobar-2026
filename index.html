@@ -33,15 +33,42 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Start font loading early so main UI has fonts ready after intro -->
+  <script>
+    // Kick off font loads as early as possible and expose a promise
+    window.fontsReady = (function () {
+      if (document.fonts && document.fonts.load) {
+        var families = ['1em "Cairo"', '1em "Pinyon Script"', '1em "Amiri"'];
+        try {
+          var loads = families.map(function (f) { return document.fonts.load(f); });
+          // Also await document.fonts.ready to cover browsers that only resolve ready
+          return Promise.all(loads).then(function () {
+            return document.fonts.ready;
+          }).catch(function () {
+            return document.fonts.ready.catch(function () { });
+          });
+        } catch (e) {
+          return document.fonts.ready || Promise.resolve();
+        }
+      }
+      return Promise.resolve();
+    })();
+  </script>
   <link
     href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Amiri:ital@0;1&family=Cairo:wght@300;400;500;600&display=swap"
     rel="stylesheet" />
+  <!-- Preload self-hosted font files (place WOFF2 files in /fonts/) -->
+  <link rel="preload" href="fonts/Cairo-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Cairo-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/PinyonScript-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Amiri-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Amiri-Italic.woff2" as="font" type="font/woff2" crossorigin>
 
   <!-- Preload critical assets -->
   <link rel="preload" as="image" href="images/intro-poster.webp" fetchpriority="high" />
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="css/style.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
@@ -66,14 +93,21 @@
         video.onended = function () {
           var root1 = document.getElementById("root_1");
           var root2 = document.getElementById("root");
-          root1.style.opacity = "0";
-          root2.style.display = "block";
-          setTimeout(function () {
-            root2.style.opacity = "1";
-            root1.style.display = "none";
-            document.getElementById("heroVideo").play();
-            window.scrollTo(0, 0);
-          }, 50);
+
+          // Wait for fonts to be ready but don't block longer than 1200ms
+          var timeout = new Promise(function (res) { setTimeout(res, 1200); });
+          var ready = (window.fontsReady instanceof Promise) ? window.fontsReady : Promise.resolve();
+
+          Promise.race([ready, timeout]).then(function () {
+            root1.style.opacity = "0";
+            root2.style.display = "block";
+            setTimeout(function () {
+              root2.style.opacity = "1";
+              root1.style.display = "none";
+              document.getElementById("heroVideo").play();
+              window.scrollTo(0, 0);
+            }, 50);
+          });
         };
       </script>
     </div>
@@ -330,7 +364,7 @@
           </div>
           <div class="bg-white/90 backdrop-blur-sm rounded-2xl border border-sage/30 shadow-lg overflow-hidden">
             <!-- Golf Cart Image -->
-            <img id="golf-cart-img" src="images/golf-cart-en.webp" alt="Golf Cart"
+            <img id="golf-cart-img" src="images/golf-cart.jpeg" alt="Golf Cart"
               class="w-full h-52 md:h-64 object-cover beige-filter" loading="lazy" decoding="async"/>
             <!-- Cards below image -->
             <div class="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-sage/20">
@@ -722,7 +756,7 @@
     })();
   </script>
 
-  <script src="js/main.min.js" defer></script>
+  <script src="js/main.js" defer></script>
 </body>
 
 </html>
