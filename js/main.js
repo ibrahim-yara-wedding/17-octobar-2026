@@ -45,7 +45,11 @@
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     submitBtn.disabled = true;
-    submitBtn.innerHTML = '<span>Sending...</span>';
+    if(window.location.hash === "#ar") {
+      submitBtn.innerHTML = '<span>...جاري الارسال</span>';
+    } else {
+      submitBtn.innerHTML = '<span>Sending...</span>';
+    }
 
     var formData = new FormData(form);
     const object = Object.fromEntries(formData);
@@ -68,9 +72,17 @@
       }
     }).catch(function () {
       submitBtn.disabled = false;
-      submitBtn.innerHTML = '<span>Something went wrong. Try again.</span>';
+      if(window.location.hash === "#ar") {
+        submitBtn.innerHTML = '<span>حدث خطأ. حاول مرة أخرى.</span>';
+      } else {
+        submitBtn.innerHTML = '<span>Something went wrong. Try again.</span>';
+      }
       setTimeout(function () {
-        submitBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path><path d="m21.854 2.147-10.94 10.939"></path></svg><span data-i18n="rsvp.submit">Send RSVP</span>';
+      if(window.location.hash === "#ar") {
+        submitBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path><path d="m21.854 2.147-10.94 10.939"></path></svg><span data-i18n="rsvp.submit">إرسال</span>';
+      } else {
+        submitBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path><path d="m21.854 2.147-10.94 10.939"></path></svg><span data-i18n="rsvp.submit">Submit</span>';
+      }
       }, 3000);
     });
   });
