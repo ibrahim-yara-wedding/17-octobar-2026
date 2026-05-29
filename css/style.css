@@ -3963,7 +3963,7 @@ body[dir="rtl"] [data-i18n^="countdown.seconds"] {
 }
 
 
-body[dir="rtl"] .uppercase {
+body[dir="rtl"] .uppercase[data-i18n], body[dir="rtl"] .uppercase [data-i18n] {
   text-transform: none !important;
 }
 
@@ -4004,7 +4004,6 @@ body[dir="rtl"] [dir="ltr"] {
   direction: ltr;
   unicode-bidi: isolate;
   font-family: var(--font-body), sans-serif !important;
-  text-transform: inherit !important;
 }
 
 body[dir="rtl"] [data-i18n="wedding.date"] {
