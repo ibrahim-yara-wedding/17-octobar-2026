@@ -21,8 +21,12 @@
 
 // Scroll reveal animation
 (function () {
-  var targets = document.querySelectorAll("main > section:not(:first-of-type), main > div.bg-ivory, main > footer");
-  targets.forEach(function (el) { el.classList.add("reveal"); });
+  var targets = document.querySelectorAll("main > section, main > div.bg-ivory, main > footer");
+  targets.forEach(function (el) {
+    if (!el.classList.contains("reveal")) {
+      el.classList.add("reveal");
+    }
+  });
 
   var observer = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
@@ -106,6 +110,7 @@
     'venue.hall': 'حديقة اللونج',
     'venue.location': 'فندق الماسة، شارع د. عبد العزيز الشناوي، جامعة الأزهر - القاهرة',
     'venue.openMaps': 'افتح في الخرائط',
+    'venue.calender': 'أضف إلى النتيجة',
     'transport.title': 'الوصول إلى المكان',
     'transport.subtitle': 'حاجات مهم تعرفوها',
     'programme.title': 'برنامج الفرح',
