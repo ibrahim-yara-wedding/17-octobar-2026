@@ -1202,6 +1202,22 @@ h6 {
 .animate-\[float_3s_ease-in-out_infinite\] {
   animation: float 3s ease-in-out infinite;
 }
+
+@keyframes illustration-sway {
+  0%,
+  100% {
+    transform: rotate(-2deg) translateY(0);
+  }
+  50% {
+    transform: rotate(2deg) translateY(-4px);
+  }
+}
+
+img[src*="images/illustrations/"] {
+  transform-origin: center;
+  will-change: transform;
+  animation: illustration-sway 4s ease-in-out infinite;
+}
 @keyframes pulse {
   50% {
     opacity: 0.5;
@@ -4009,6 +4025,20 @@ body[dir="rtl"] .uppercase[data-i18n], body[dir="rtl"] .uppercase [data-i18n] {
 
 body[dir="rtl"] .programme-section .flex.items-center {
   flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+}
+
+.programme-section .absolute.left-1\/2 {
+  left: auto;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+body[dir="rtl"] .programme-section .absolute.left-1\/2 {
+  left: auto;
+  right: 50%;
+  transform: translateX(50%);
 }
 
 body[dir="rtl"] .programme-section .w-1\/2.pr-8 {
