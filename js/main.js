@@ -92,7 +92,7 @@
 (function () {
   var AR = {
     'hero.subtitle': 'احنا هنتجوز',
-    'hero.rsvp': 'مستعد للاحتفال؟',
+    'hero.rsvp': 'جاهز للاحتفال؟',
     'countdown.title': 'العد التنازلي',
     'countdown.days': 'أيام',
     'countdown.hours': 'ساعات',
