@@ -3919,8 +3919,6 @@ img[src*="images/illustrations/"] {
 }
 
 .amp-symbol {
-  font-family: 'Great Vibes', cursive !important;
-  font-size: clamp(1.5rem, 6vw, 3.2rem);
   color: rgba(255, 240, 210, .75);
 }
 
