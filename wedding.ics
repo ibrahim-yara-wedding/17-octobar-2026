@@ -7,7 +7,12 @@ BEGIN:VEVENT
 SUMMARY:Ibrahim & Yara Wedding
 DTSTART:20261017T180000
 DTEND:20261018T000000
-LOCATION:Garden Lounge, Almasa Hotel
+LOCATION:Garden Lounge - Almasa Hotel
 DESCRIPTION:Save the Date - Saturday October 17, 2026 at 6:00 PM
+BEGIN:VALARM
+TRIGGER:-P1D
+DESCRIPTION:Reminder: Ibrahim & Yara Wedding is tomorrow!
+ACTION:DISPLAY
+END:VALARM
 END:VEVENT
 END:VCALENDAR
