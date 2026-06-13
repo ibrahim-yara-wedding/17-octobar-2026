@@ -95,7 +95,7 @@
 // i18n — Arabic/English toggle
 (function () {
   var AR = {
-    'hero.subtitle': 'احنا هنتجوز',
+    'hero.subtitle': 'إحنا هنتجوز',
     'hero.rsvp': 'جاهز للاحتفال؟',
     'countdown.title': 'العد التنازلي',
     'countdown.days': 'أيام',
@@ -126,7 +126,7 @@
     'dresscode.men.desc': 'ممكن تركن عربيتك في الشارع خارج فندق الماسة من غير رسوم أو داخل الفندق برسوم بسيطة بالساعة',
     'gifts.title': 'نوماً هنيًا للأطفال',
     'gifts.desc': 'دا فرح للكبار — استمتعوا بليلة من غيرهم!',
-    'rsvp.title': 'قائمة العازيم',
+    'rsvp.title': 'قائمة المعازيم',
     'rsvp.subtitle': 'قولولنا لو هتقدروا تيجوا',
     'rsvp.attending': 'هل هتيجي *',
     'rsvp.yes': 'أيوه، هكون موجود',

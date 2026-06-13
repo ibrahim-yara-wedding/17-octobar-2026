@@ -1206,17 +1206,17 @@ h6 {
 @keyframes illustration-sway {
   0%,
   100% {
-    transform: rotate(-2deg) translateY(0);
+    transform: rotate(-3deg) translateY(0);
   }
   50% {
-    transform: rotate(2deg) translateY(-4px);
+    transform: rotate(3deg) translateY(-4px);
   }
 }
 
 img[src*="images/illustrations/"] {
   transform-origin: center;
   will-change: transform;
-  animation: illustration-sway 4s ease-in-out infinite;
+  animation: illustration-sway 3s ease-in-out infinite;
 }
 @keyframes pulse {
   50% {
