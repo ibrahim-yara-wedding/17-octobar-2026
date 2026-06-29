@@ -2496,6 +2496,32 @@ img[src*="images/illustrations/"] {
 .animate-marquee:hover {
   animation-play-state: paused;
 }
+@keyframes slideUpIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-slideUp {
+  opacity: 0;
+  animation: slideUpIn 0.5s ease-out forwards;
+}
+.delay-100 {
+  animation-delay: 0.3s;
+}
+.delay-200 {
+  animation-delay: 0.6s;
+}
+.delay-300 {
+  animation-delay: 0.9s;
+}
+.delay-400 {
+  animation-delay: 1.2s;
+}
 .file\:border-0::file-selector-button {
   border-width: 0px;
 }
