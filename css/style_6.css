@@ -1839,6 +1839,9 @@ img[src*="images/illustrations/"] {
 .pt-20 {
   padding-top: 5rem;
 }
+.pt-24 {
+  padding-top: 12rem;
+}
 .pt-3 {
   padding-top: 0.75rem;
 }
@@ -3560,6 +3563,9 @@ img[src*="images/illustrations/"] {
   }
   .md\:pt-28 {
     padding-top: 7rem;
+  }
+  .md\:pt-30 {
+    padding-top: 14rem;
   }
   .md\:text-4xl {
     font-size: 2.25rem;
