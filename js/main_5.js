@@ -102,7 +102,7 @@
     'countdown.hours': 'ساعات',
     'countdown.minutes': 'دقائق',
     'countdown.seconds': 'ثواني',
-    'welcome.title': 'أهلًا بيك!',
+    'welcome.title': 'أهلًا بيكم!',
     'welcome.body': 'يسعدنا دعوتكم للاحتفال معنا بيوم فرحنا. مستنيين نشارك اللحظة دي مع أغلى الناس على قلوبنا.',
     'venue.title': 'القاعة',
     'venue.subtitle': 'مكان الاحتفال',
