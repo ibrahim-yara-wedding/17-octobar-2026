@@ -185,6 +185,39 @@ body {
   margin: 0;
   line-height: inherit;
 }
+.intro-tap-label {
+  position: absolute;
+  left: 50%;
+  bottom: 1.75rem;
+  transform: translateX(-50%);
+  z-index: 60;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.25rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(197, 164, 109, 0.25);
+  color: #4a473f;
+  font-family: 'Cairo', ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  animation: tapLabelPulse 2.8s ease-in-out infinite;
+}
+.intro-tap-label span {
+  white-space: nowrap;
+}
+@keyframes tapLabelPulse {
+  0%, 100% { transform: translateX(-50%) translateY(0); opacity: 1; }
+  25% { transform: translateX(-50%) translateY(-4px); opacity: 0.95; }
+  50% { transform: translateX(-50%) translateY(-8px); opacity: 0.9; }
+  75% { transform: translateX(-50%) translateY(-4px); opacity: 0.95; }
+}
 hr {
   height: 0;
   color: inherit;

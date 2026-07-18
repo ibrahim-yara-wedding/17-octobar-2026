@@ -136,7 +136,8 @@
     'rsvp.message.placeholder': 'في حاجة حابين تقولوهالنا؟',
     'rsvp.submit': 'إرسال',
     'rsvp.thanks': 'شكراً لك!',
-    'rsvp.thanks.msg': 'إحنا متحمسين جداً نحتفل معاكم! وصلنا ردكم — نشوفكم في الفرح!'
+    'rsvp.thanks.msg': 'إحنا متحمسين جداً نحتفل معاكم! وصلنا ردكم — نشوفكم في الفرح!',
+    'intro.tap': 'اضغط للفتح'
   };
 
   var EN_TEXT = {}, EN_PLACEHOLDER = {};
