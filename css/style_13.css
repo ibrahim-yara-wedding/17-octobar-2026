@@ -185,6 +185,61 @@ body {
   margin: 0;
   line-height: inherit;
 }
+.venue-action-link {
+  padding: 0.95rem 1.2rem;
+  min-height: 48px;
+  border-radius: 999px;
+  border: 1px solid rgba(197, 164, 109, 0.35);
+  background: rgba(197, 164, 109, 0.12);
+  box-shadow: 0 6px 18px rgba(66, 52, 28, 0.08);
+  transition: all 180ms ease;
+  text-decoration: none;
+  touch-action: manipulation;
+  cursor: pointer;
+}
+.venue-action-link:hover,
+.venue-action-link:focus-visible {
+  background: rgb(197, 164, 109);
+  color: rgb(249, 247, 242);
+  border-color: rgb(197, 164, 109);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(66, 52, 28, 0.16);
+}
+.footer-shell {
+  border-top: 1px solid rgba(197, 164, 109, 0.2);
+}
+.footer-ornament {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 0 auto 1rem;
+  border-radius: 999px;
+  background: rgba(197, 164, 109, 0.12);
+  color: rgb(197, 164, 109);
+}
+.footer-meta {
+  margin-top: 0.75rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: rgba(86, 73, 53, 0.75);
+  font-family: 'Cairo', sans-serif;
+}
+.footer-dot {
+  margin: 0 0.45rem;
+}
+@media (max-width: 640px) {
+  .venue-action-link {
+    padding: 1rem 1.25rem;
+    font-size: 0.95rem;
+  }
+  .footer-meta {
+    font-size: 0.66rem;
+    line-height: 1.8;
+  }
+}
 .intro-tap-label {
   position: absolute;
   left: 50%;
