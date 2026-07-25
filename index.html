@@ -76,10 +76,14 @@
   <link rel="preload" as="image" href="images/intro-cover_3.webp" fetchpriority="high" />
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="css/style_13.css" />
+  <link rel="stylesheet" href="css/style_15.css" />
 </head>
 
 <body>
+  <!-- Initial loading overlay shown until intro video is ready -->
+  <div id="initialLoader" aria-hidden="true" style="position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;background:#ffffff;transition:opacity .4s ease,visibility .4s;">
+    <div class="loader-spinner" aria-hidden="true"></div>
+  </div>
   <!-- Intro Video Overlay -->
   <div id="root_1" style="position:fixed;inset:0;z-index:100;transition:opacity 1s ease">
     <div class="fixed inset-0 z-50 cursor-pointer bg-white" style="opacity:1">
@@ -92,7 +96,20 @@
       </video>
 
       <div class="intro-tap-label" role="status" aria-live="polite">
-        <span class="small-star">&#9734;</span><span class="intro-tap-text" data-i18n="intro.tap">Tap to open</span><span class="small-star">&#9734;</span>
+        <svg class="sparkle" viewBox="0 0 24 24">
+          <path d="M12 2
+             C12.8 6.5 15.5 9.2 20 10
+             C15.5 10.8 12.8 13.5 12 18
+             C11.2 13.5 8.5 10.8 4 10
+             C8.5 9.2 11.2 6.5 12 2Z"/>
+        </svg><span class="intro-tap-text" data-i18n="intro.tap">Tap to open</span>
+		<svg class="sparkle" viewBox="0 0 24 24">
+          <path d="M12 2
+             C12.8 6.5 15.5 9.2 20 10
+             C15.5 10.8 12.8 13.5 12 18
+             C11.2 13.5 8.5 10.8 4 10
+             C8.5 9.2 11.2 6.5 12 2Z"/>
+         </svg>
       </div>
 
       <script>
@@ -619,7 +636,7 @@
     })();
   </script>
 
-  <script src="js/main_9.js" defer></script>
+  <script src="js/main_12.js" defer></script>
 </body>
 
 </html>

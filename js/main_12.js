@@ -19,6 +19,19 @@
   var timer = setInterval(update, 1000);
 })();
 
+// Initial loader: hide when intro video is ready to play
+(function () {
+  function hideLoader() {
+    var loader = document.getElementById('initialLoader');
+    if (!loader) return;
+    loader.classList.add('hidden');
+    setTimeout(function () { if (loader && loader.parentNode) loader.parentNode.removeChild(loader); }, 700);
+  }
+
+  // Safety fallback: remove loader after 5s even if events don't fire
+  setTimeout(function () { hideLoader(); cleanup(); }, 1500);
+})();
+
 // Scroll reveal animation
 (function () {
   var targets = document.querySelectorAll("main > section, main > div.bg-ivory, main > footer");
