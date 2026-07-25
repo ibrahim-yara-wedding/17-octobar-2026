@@ -372,8 +372,8 @@
             <div class="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-sage/20">
               <!-- Transportation Card -->
               <div class="p-8 text-center">
-                <div class="w-12 h-12 mx-auto mb-4 rounded-full bg-gold/10 flex items-center justify-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                <div class="w-14 h-14 mx-auto mb-4 rounded-full bg-gold/10 flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-gold">
                     <path d="M8 6v6"></path><path d="M15 6v6"></path>
                     <path d="M2 12h19.6"></path>
@@ -396,8 +396,8 @@
               </div>
               <!-- Parking Card -->
               <div class="p-8 text-center">
-                <div class="w-12 h-12 mx-auto mb-4 rounded-full bg-gold/10 flex items-center justify-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                <div class="w-14 h-14 mx-auto mb-4 rounded-full bg-gold/10 flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-gold">
                     <rect width="18" height="18" x="3" y="3" rx="2"></rect>
                     <path d="M9 17V7h4a3 3 0 0 1 0 6H9"></path>
@@ -529,11 +529,6 @@
       <p class="font-display font-en text-5xl md:text-6xl text-sage-dark mb-1 leading-tight">&amp;</p>
       <p class="font-display font-en text-5xl md:text-6xl text-sage-dark mb-3 leading-tight">Yara</p>
       <p class="text-lg text-gold font-body font-en font-semibold uppercase tracking-wide mb-4" dir="ltr">17 October 2026</p>
-      <div class="footer-meta">
-        <span>Made with love</span>
-        <span class="footer-dot">•</span>
-        <span>With joy, gratitude, and a little sparkle</span>
-      </div>
     </div>
   </footer>
   </main>
@@ -573,34 +568,58 @@
       var ICON_ON = '<path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"></path><path d="M16 9a5 5 0 0 1 0 6"></path><path d="M19.364 18.364a9 9 0 0 0 0-12.728"></path>';
       var ICON_OFF = '<path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"></path><line x1="22" x2="16" y1="9" y2="15"></line><line x1="16" x2="22" y1="9" y2="15"></line>';
 
-      btn.addEventListener("click", function (e) {
-        e.stopPropagation();
-        var nowMuted = !audio.muted;
-        audio.muted = nowMuted;
-        audio.volume = nowMuted ? 0 : 1;
-        if (!nowMuted && audio.paused) audio.play().catch(function () { });
-        icon.innerHTML = nowMuted ? ICON_OFF : ICON_ON;
-        btn.setAttribute("aria-label", nowMuted ? "Unmute" : "Mute");
-      });
-    })();
+      function tryPlayAudio() {
+        if (!audio || audio.muted || document.hidden) return;
+        var playPromise = audio.play();
+        if (playPromise && typeof playPromise.then === "function") {
+          playPromise.catch(function () { });
+        }
+      }
 
-    // Pause/resume music on tab visibility change (works on desktop tab switch & mobile background)
-    (function () {
-      var audio = document.getElementById("bgMusic");
-      var wasPlaying = false;
+      function pauseAudio() {
+        if (!audio || audio.paused) return;
+        audio.pause();
+      }
+
+      if (btn && icon) {
+        btn.addEventListener("click", function (e) {
+          e.stopPropagation();
+          var nowMuted = !audio.muted;
+          audio.muted = nowMuted;
+          audio.volume = nowMuted ? 0 : 1;
+          if (!nowMuted) {
+            tryPlayAudio();
+          } else {
+            pauseAudio();
+          }
+          icon.innerHTML = nowMuted ? ICON_OFF : ICON_ON;
+          btn.setAttribute("aria-label", nowMuted ? "Unmute" : "Mute");
+        });
+      }
+
+      document.addEventListener("touchstart", tryPlayAudio, { passive: true });
+      document.addEventListener("keydown", tryPlayAudio, { passive: true });
+      document.addEventListener("click", tryPlayAudio, { passive: true });
+
+      window.addEventListener("focus", function () {
+        tryPlayAudio();
+      });
+
+      window.addEventListener("pageshow", function () {
+        tryPlayAudio();
+      });
 
       document.addEventListener("visibilitychange", function () {
         if (document.hidden) {
-          wasPlaying = !audio.paused;
-          if (wasPlaying) audio.pause();
+          pauseAudio();
         } else {
-          if (wasPlaying && !audio.muted) audio.play().catch(function () { });
+          tryPlayAudio();
         }
       });
     })();
   </script>
 
-  <script src="js/main_7.js" defer></script>
+  <script src="js/main_9.js" defer></script>
 </body>
 
 </html>
