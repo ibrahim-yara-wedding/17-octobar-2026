@@ -1,6 +1,12 @@
 // Countdown timer
 (function () {
-  var targetDate = new Date("Oct 17, 2026 20:00:00").getTime();
+  var targetDate = new Date("Oct 17, 2026 18:00:00").getTime();
+
+  function toArabicDigits(value) {
+    return String(value).replace(/\d/g, function (d) {
+      return '٠١٢٣٤٥٦٧٨٩'[Number(d)];
+    });
+  }
 
   function update() {
     var diff = targetDate - Date.now();
@@ -9,10 +15,16 @@
       clearInterval(timer);
       return;
     }
-    document.getElementById("days").innerText = Math.floor(diff / 86400000);
-    document.getElementById("hours").innerText = String(Math.floor((diff % 86400000) / 3600000)).padStart(2, "0");
-    document.getElementById("minutes").innerText = String(Math.floor((diff % 3600000) / 60000)).padStart(2, "0");
-    document.getElementById("seconds").innerText = String(Math.floor((diff % 60000) / 1000)).padStart(2, "0");
+    var isArabic = document.body && document.body.dir === "rtl";
+    var days = Math.floor(diff / 86400000);
+    var hours = String(Math.floor((diff % 86400000) / 3600000)).padStart(2, "0");
+    var minutes = String(Math.floor((diff % 3600000) / 60000)).padStart(2, "0");
+    var seconds = String(Math.floor((diff % 60000) / 1000)).padStart(2, "0");
+
+    document.getElementById("days").innerText = isArabic ? toArabicDigits(days) : days;
+    document.getElementById("hours").innerText = isArabic ? toArabicDigits(hours) : hours;
+    document.getElementById("minutes").innerText = isArabic ? toArabicDigits(minutes) : minutes;
+    document.getElementById("seconds").innerText = isArabic ? toArabicDigits(seconds) : seconds;
   }
 
   update();
@@ -109,7 +121,13 @@
 (function () {
   var AR = {
     'hero.subtitle': 'إحنا هنتجوز',
+    'hero.names': 'إِبْرَاهِيم وَ يَارَا',
     'hero.rsvp': 'جاهز للاحتفال؟',
+    'event.date': '١٧ أكتوبر ٢٠٢٦',
+    'event.dateTime': '١٧ أكتوبر ٢٠٢٦ - ٦:٠٠ م',
+    'footer.groom': 'إِبْرَاهِيم',
+    'footer.and': 'و',
+    'footer.bride': 'يَارَا',
     'countdown.title': 'العد التنازلي',
     'countdown.days': 'أيام',
     'countdown.hours': 'ساعات',
@@ -179,6 +197,12 @@
     document.querySelectorAll("[data-i18n-placeholder]").forEach(function (el) {
       var v = tp[el.getAttribute("data-i18n-placeholder")];
       if (v !== undefined) el.placeholder = v;
+    });
+
+    document.querySelectorAll("[data-i18n='event.date'], [data-i18n='event.dateTime']").forEach(function (el) {
+      el.setAttribute("dir", isAR ? "rtl" : "ltr");
+      el.style.direction = isAR ? "rtl" : "ltr";
+      el.style.whiteSpace = isAR ? "normal" : "normal";
     });
 
     var btnEn = document.getElementById("btn-en");

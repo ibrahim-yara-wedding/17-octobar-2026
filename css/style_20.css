@@ -1950,7 +1950,7 @@ img[src*="images/illustrations/"] {
   padding-top: 5rem;
 }
 .pt-24 {
-  padding-top: 12rem;
+  padding-top: 11rem;
 }
 .pt-3 {
   padding-top: 0.75rem;
@@ -1980,6 +1980,12 @@ img[src*="images/illustrations/"] {
 .font-display.font-en {
   font-family: "Pinyon Script", cursive !important;
   letter-spacing: initial !important;
+}
+.wedding-signature {
+  font-family: "Pinyon Script", cursive;
+  letter-spacing: 0.03em;
+  line-height: 0.9;
+  font-weight: 400;
 }
 .font-body.font-en {
   letter-spacing: initial !important;
@@ -4093,6 +4099,16 @@ body[dir="rtl"] .font-display:not(.font-en) {
   font-family: 'Amiri', serif;
 }
 
+body[dir="rtl"] .wedding-signature {
+  font-family: 'Amiri', serif !important;
+  font-size: clamp(2.8rem, 6vw, 4.2rem) !important;
+  line-height: 1.1 !important;
+  letter-spacing: 0 !important;
+  font-weight: 700 !important;
+  font-style: normal !important;
+  text-shadow: none;
+}
+
 body[dir="rtl"] .font-en {
   font-family: 'Pinyon Script', cursive !important;
   letter-spacing: initial !important;
@@ -4117,6 +4133,16 @@ body[dir="rtl"] .font-en.text-lg {
 
 body[dir="rtl"] .font-body {
   font-family: var(--font-body), 'Cairo', sans-serif;
+}
+
+body[dir="rtl"] .font-body.font-en[data-i18n="event.dateTime"] {
+  direction: rtl;
+  unicode-bidi: isolate;
+}
+
+body[dir="rtl"] .date-time {
+  padding-right: 5px !important;
+  padding-left: 5px !important;
 }
 
 body[dir="rtl"] #btn-en,
@@ -4148,7 +4174,8 @@ body[dir="rtl"] .text-sm[data-i18n], body[dir="rtl"] .text-sm [data-i18n] {
 }
 
 body[dir="rtl"] .text-me[data-i18n], body[dir="rtl"] .text-me [data-i18n] {
-  font-size: 1.25rem !important;
+  font-size: 1.5rem !important;
+  line-height: 1.6 !important;
 }
 
 body[dir="rtl"] .text-base[data-i18n], body[dir="rtl"] .text-base [data-i18n] {
