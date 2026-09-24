@@ -120,7 +120,7 @@
 // i18n — Arabic/English toggle
 (function () {
   var AR = {
-    'hero.subtitle': 'إحنا هنتجوز',
+    'hero.subtitle': 'عقد قران',
     'hero.names': 'إِبْرَاهِيم وَ يَارَا',
     'hero.rsvp': 'جاهز للاحتفال؟',
     'event.date': '١٧ أكتوبر ٢٠٢٦',

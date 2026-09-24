@@ -1055,7 +1055,14 @@ h6 {
   min-height: 80px;
 }
 .min-h-screen {
-  min-height: 85vh;
+  min-height: 100vh;
+  min-height: 100svh;
+}
+
+/* keeps hero copy confined to the top half of the video, vertically centered within it */
+.hero-text-band {
+  height: 80vh;
+  height: 80svh;
 }
 .min-h-svh {
   min-height: 100svh;
@@ -1950,7 +1957,7 @@ img[src*="images/illustrations/"] {
   padding-top: 5rem;
 }
 .pt-24 {
-  padding-top: 11rem;
+  padding-top: 9.5rem;
 }
 .pt-3 {
   padding-top: 0.75rem;
@@ -4174,8 +4181,8 @@ body[dir="rtl"] .text-sm[data-i18n], body[dir="rtl"] .text-sm [data-i18n] {
 }
 
 body[dir="rtl"] .text-me[data-i18n], body[dir="rtl"] .text-me [data-i18n] {
-  font-size: 1.5rem !important;
-  line-height: 1.6 !important;
+  font-size: 1.4rem !important;
+  line-height: 1.2 !important;
 }
 
 body[dir="rtl"] .text-base[data-i18n], body[dir="rtl"] .text-base [data-i18n] {
@@ -4276,6 +4283,25 @@ body[dir="rtl"] #seconds {
   font-family: var(--font-display), cursive !important;
   direction: ltr;
   unicode-bidi: isolate;
+}
+
+/* ==========================================================================
+   Small phone hero scaling (compiled text-6xl/text-me are fixed-size)
+   ========================================================================== */
+
+@media (max-width: 767px) {
+  .wedding-signature.text-6xl {
+    font-size: clamp(3.1rem, 13vw, 3.75rem) !important;
+  }
+
+  .sd-bismillah {
+    font-size: clamp(1.1rem, 5vw, 1.3rem) !important;
+  }
+
+  .text-me.married-title {
+    letter-spacing: 0.5em !important;
+    font-size: 0.8rem !important;
+  }
 }
 
 body[dir="rtl"] {
