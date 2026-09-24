@@ -65,6 +65,23 @@
   targets.forEach(function (el) { observer.observe(el); });
 })();
 
+(function () {
+  var cue = document.getElementById("scrollCue");
+  var target = document.getElementById("countdown");
+  if (!cue || !target) return;
+
+  function updateCue() {
+    cue.classList.toggle("is-hidden", window.scrollY > 24);
+  }
+
+  cue.addEventListener("click", function () {
+    target.scrollIntoView({ behavior: "smooth", block: "start" });
+    updateCue();
+  });
+  window.addEventListener("scroll", updateCue, { passive: true });
+  updateCue();
+})();
+
 // RSVP form AJAX submission
 (function () {
   var form = document.getElementById("rsvpForm");
@@ -169,9 +186,10 @@
     'rsvp.thanks': 'شكراً لك!',
     'rsvp.thanks.msg': 'إحنا متحمسين جداً نحتفل معاكم! وصلنا ردكم — نشوفكم في الفرح!',
     'intro.tap': 'اضغط للفتح',
+    'scrollCue.text': 'انزل عشان تبدأ قصتنا',
   };
 
-  var EN_TEXT = {}, EN_PLACEHOLDER = {};
+  var EN_TEXT = {}, EN_PLACEHOLDER = {}, EN_ARIA_LABEL = {};
   document.querySelectorAll("[data-i18n]").forEach(function (el) {
     var k = el.getAttribute("data-i18n");
     if (!EN_TEXT[k]) EN_TEXT[k] = el.textContent.trim();
@@ -179,6 +197,10 @@
   document.querySelectorAll("[data-i18n-placeholder]").forEach(function (el) {
     var k = el.getAttribute("data-i18n-placeholder");
     if (!EN_PLACEHOLDER[k]) EN_PLACEHOLDER[k] = el.placeholder;
+  });
+  document.querySelectorAll("[data-i18n-aria-label]").forEach(function (el) {
+    var k = el.getAttribute("data-i18n-aria-label");
+    if (!EN_ARIA_LABEL[k]) EN_ARIA_LABEL[k] = el.getAttribute("aria-label");
   });
 
   function applyLanguage(lang) {
@@ -197,6 +219,11 @@
     document.querySelectorAll("[data-i18n-placeholder]").forEach(function (el) {
       var v = tp[el.getAttribute("data-i18n-placeholder")];
       if (v !== undefined) el.placeholder = v;
+    });
+    document.querySelectorAll("[data-i18n-aria-label]").forEach(function (el) {
+      var key = el.getAttribute("data-i18n-aria-label");
+      var v = isAR ? AR[key] : EN_ARIA_LABEL[key];
+      if (v !== undefined) el.setAttribute("aria-label", v);
     });
 
     document.querySelectorAll("[data-i18n='event.date'], [data-i18n='event.dateTime']").forEach(function (el) {

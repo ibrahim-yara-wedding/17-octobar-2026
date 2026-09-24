@@ -76,7 +76,7 @@
   <link rel="preload" as="image" href="images/intro-cover_3.webp" fetchpriority="high" />
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="css/style_27.css" />
+  <link rel="stylesheet" href="css/style_28.css" />
 </head>
 
 <body>
@@ -176,6 +176,15 @@
             <p class="text-me md:text-base tracking-[0.4em] uppercase text-white mb-8 font-body font-semibold drop-shadow-lg married-title animate-slideUp delay-400"
               dir="auto" data-i18n="event.date">17 October 2026</p>
           </div>
+          <button id="scrollCue" class="scroll-cue" type="button" aria-controls="countdown" aria-label="Scroll to explore">
+            <span data-i18n="scrollCue.text">Scroll to begin our story</span>
+            <svg class="scroll-cue-arrow" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+              aria-hidden="true">
+              <path d="M12 5v14"></path>
+              <path d="m19 12-7 7-7-7"></path>
+            </svg>
+          </button>
         </div>
       </section>
 
@@ -545,7 +554,7 @@
 
   <!-- Mute Button -->
   <button id="muteBtn"
-    class="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-full bg-white/90 backdrop-blur-sm border border-gold/30 shadow-lg flex items-center justify-center text-sage-dark hover:bg-white hover:scale-110 transition-all duration-300"
+    class="fixed top-4 left-6 z-40 w-12 h-12 rounded-full bg-white/90 backdrop-blur-sm border border-gold/30 shadow-lg flex items-center justify-center text-sage-dark hover:bg-white hover:scale-110 transition-all duration-300"
     aria-label="Mute">
     <svg id="muteBtnIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
       stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
@@ -629,7 +638,7 @@
     })();
   </script>
 
-  <script src="js/main_20.js" defer></script>
+  <script src="js/main_21.js" defer></script>
 </body>
 
 </html>
